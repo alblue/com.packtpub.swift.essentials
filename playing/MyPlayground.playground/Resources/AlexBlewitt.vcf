@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.9.4//EN
+N:Blewitt;Alex;;;
+FN:Alex Blewitt
+ORG:Bandlem Ltd;
+EMAIL;type=INTERNET;type=WORK;type=pref:alex.blewitt@gmail.com
+NOTE:Author for InfoQ and Packt Publishing\n@alblue on twitter
+item1.URL;type=pref:http://alblue.bandlem.com
+item1.X-ABLabel:blog
+item2.URL:http://github.com/alblue/com.packtpub.swift.essentials/
+item2.X-ABLabel:code
+URL;type=WORK:http://www.infoq.com
+URL;type=WORK:http://www.packtpub.com
+UID:285a11a4-c9be-4fd9-812e-74499a4e38bb
+X-ABUID:285A11A4-C9BE-4FD9-812E-74499A4E38BB:ABPerson
+END:VCARD
