@@ -3,3 +3,8 @@
 import UIKit
 
 var str = "Hello, playground"
+
+for i in 1...12 {
+	var j = (i-7)*(i-6)
+	println("I is \(i)")
+}
