@@ -19,4 +19,6 @@ label.font = UIFont.systemFontOfSize(24)
 
 let logo = UIImage(named:"logo")
 
+import XCPlayground
 
+XCPCaptureValue("logo",logo)
