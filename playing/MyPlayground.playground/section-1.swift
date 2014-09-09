@@ -23,12 +23,16 @@ import XCPlayground
 
 XCPCaptureValue("logo",logo)
 
-for n in 1...6 {
-  if n % 2 == 0 {
-	XCPCaptureValue("even",n)
-	XCPCaptureValue("odd",0)
-  } else {
-	XCPCaptureValue("odd",n)
-	XCPCaptureValue("even",0)
-  }
+dispatch_async(dispatch_get_main_queue()) {
+	for n in 1...6 {
+		if n % 2 == 0 {
+			XCPCaptureValue("even",n)
+			XCPCaptureValue("odd",0)
+		} else {
+			XCPCaptureValue("odd",n)
+			XCPCaptureValue("even",0)
+		}
+	}
 }
+XCPSetExecutionShouldContinueIndefinitely()
+
