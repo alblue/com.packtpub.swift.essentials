@@ -35,3 +35,11 @@ enum Rank:Int {
 
 // Rank.Two.toRaw() == 2
 // Rank.fromRaw(14)! == Rank.Ace
+
+enum Card {
+	case Face(Rank,Suit)
+	case Joker
+}
+
+// var aceOfSpades:Card = .Face(.Ace,.Spades)
+// var theJoker:Card = .Joker
