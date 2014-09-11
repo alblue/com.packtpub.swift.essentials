@@ -31,4 +31,21 @@ class CardsTest:XCTestCase {
 		XCTAssertEqual(Rank.Two.rawValue,2,"Rank.Two.rawValue == 2")
 		XCTAssertEqual(Rank(rawValue: 14)!,Rank.Ace,"Rank(rawValue:14)! ==  Rank.Ace")
 	}
+	func testCard() {
+		let aceOfSpades:Card = .Face(.Ace,.Spades)
+		let theJoker:Card = .Joker
+
+		var jokerSeen = false;
+		var aceOfSpadesSeen = false;
+
+		for card in [aceOfSpades,theJoker] {
+			switch(card) {
+			case .Face(.Ace,.Spades): aceOfSpadesSeen = true
+			case .Face(let rank, let suit): XCTFail("Saw a card \(rank) of \(suit)")
+			case .Joker: jokerSeen = true
+			}
+		}
+		XCTAssert(jokerSeen)
+		XCTAssert(aceOfSpadesSeen)
+	}
 }
