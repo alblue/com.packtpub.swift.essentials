@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FABAA7E719C20D400081D64D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA7E619C20D400081D64D /* AppDelegate.swift */; };
 		FABAA7E919C20D400081D64D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA7E819C20D400081D64D /* ViewController.swift */; };
-		FABAA7EC19C20D400081D64D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABAA7EA19C20D400081D64D /* Main.storyboard */; };
 		FABAA7EE19C20D400081D64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABAA7ED19C20D400081D64D /* Images.xcassets */; };
 		FABAA7F119C20D400081D64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABAA7EF19C20D400081D64D /* LaunchScreen.xib */; };
 		FABAA7FD19C20D400081D64D /* SingleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA7FC19C20D400081D64D /* SingleViewTests.swift */; };
@@ -30,7 +29,6 @@
 		FABAA7E519C20D400081D64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABAA7E619C20D400081D64D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABAA7E819C20D400081D64D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FABAA7EB19C20D400081D64D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FABAA7ED19C20D400081D64D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FABAA7F019C20D400081D64D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FABAA7F619C20D400081D64D /* SingleViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +77,6 @@
 			children = (
 				FABAA7E619C20D400081D64D /* AppDelegate.swift */,
 				FABAA7E819C20D400081D64D /* ViewController.swift */,
-				FABAA7EA19C20D400081D64D /* Main.storyboard */,
 				FABAA7ED19C20D400081D64D /* Images.xcassets */,
 				FABAA7EF19C20D400081D64D /* LaunchScreen.xib */,
 				FABAA7E419C20D400081D64D /* Supporting Files */,
@@ -193,7 +190,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABAA7EC19C20D400081D64D /* Main.storyboard in Resources */,
 				FABAA7F119C20D400081D64D /* LaunchScreen.xib in Resources */,
 				FABAA7EE19C20D400081D64D /* Images.xcassets in Resources */,
 			);
@@ -237,14 +233,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FABAA7EA19C20D400081D64D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FABAA7EB19C20D400081D64D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FABAA7EF19C20D400081D64D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
