@@ -12,8 +12,9 @@
 		FABAA7EE19C20D400081D64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABAA7ED19C20D400081D64D /* Images.xcassets */; };
 		FABAA7F119C20D400081D64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABAA7EF19C20D400081D64D /* LaunchScreen.xib */; };
 		FABAA7FD19C20D400081D64D /* SingleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA7FC19C20D400081D64D /* SingleViewTests.swift */; };
-		FABAA80719C244B30081D64D /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80619C244B30081D64D /* GitHubRepository.swift */; };
 		FABAA80819C244B30081D64D /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80619C244B30081D64D /* GitHubRepository.swift */; };
+		FABAA80B19C2472E0081D64D /* GitHubRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80919C2472E0081D64D /* GitHubRepositoryTest.swift */; };
+		FABAA80C19C247B40081D64D /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80619C244B30081D64D /* GitHubRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		FABAA7FB19C20D400081D64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABAA7FC19C20D400081D64D /* SingleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewTests.swift; sourceTree = "<group>"; };
 		FABAA80619C244B30081D64D /* GitHubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		FABAA80919C2472E0081D64D /* GitHubRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FABAA7D819C20D400081D64D = {
 			isa = PBXGroup;
 			children = (
+				FABAA80919C2472E0081D64D /* GitHubRepositoryTest.swift */,
 				FABAA80619C244B30081D64D /* GitHubRepository.swift */,
 				FABAA7E319C20D400081D64D /* SingleView */,
 				FABAA7F919C20D400081D64D /* SingleViewTests */,
@@ -212,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABAA80719C244B30081D64D /* GitHubRepository.swift in Sources */,
+				FABAA80C19C247B40081D64D /* GitHubRepository.swift in Sources */,
 				FABAA7E919C20D400081D64D /* ViewController.swift in Sources */,
 				FABAA7E719C20D400081D64D /* AppDelegate.swift in Sources */,
 			);
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABAA80819C244B30081D64D /* GitHubRepository.swift in Sources */,
+				FABAA80B19C2472E0081D64D /* GitHubRepositoryTest.swift in Sources */,
 				FABAA7FD19C20D400081D64D /* SingleViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
