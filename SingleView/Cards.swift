@@ -26,3 +26,12 @@ enum Suit {
 
 // var suit:Suit = Suit.Clubs
 // var suit:Suit = .Clubs
+
+enum Rank:Int {
+	case Two = 2, Three, Four, Five
+	case Six, Seven, Eight, Nine, Ten
+	case Jack, Queen, King, Ace
+}
+
+// Rank.Two.toRaw() == 2
+// Rank.fromRaw(14)! == Rank.Ace
