@@ -26,14 +26,18 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		view.backgroundColor = UIColor.blackColor()
+		let label = UILabel(frame:view.bounds)
+		label.textColor = UIColor.whiteColor()
+		label.textAlignment = .Center
+		label.text = "Welcome to Swift"
+		view.addSubview(label)
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
 
 }
 
