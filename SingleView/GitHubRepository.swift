@@ -20,10 +20,15 @@
 // THE SOFTWARE.
 
 class GitHubRepository {
+	class var api:String {
+		get {
+			return "https://api.github.com"
+		}
+	}
 	var id:UInt64 = 0
 	var name:String = ""
 	func detailsURL() -> String {
-		return "https://api.github.com/repositories/\(id)"
+		return "\(GitHubRepository.api)/repositories/\(id)"
 	}
 }
 
