@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4A0F641C386F07008F1599 /* GitHubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A0F631C386F07008F1599 /* GitHubDetails.swift */; };
+		FA4A0F651C386F07008F1599 /* GitHubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A0F631C386F07008F1599 /* GitHubDetails.swift */; };
 		FABAA7E719C20D400081D64D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA7E619C20D400081D64D /* AppDelegate.swift */; };
 		FABAA7E919C20D400081D64D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA7E819C20D400081D64D /* ViewController.swift */; };
 		FABAA7EE19C20D400081D64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABAA7ED19C20D400081D64D /* Images.xcassets */; };
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA4A0F631C386F07008F1599 /* GitHubDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubDetails.swift; sourceTree = "<group>"; };
 		FABAA7E119C20D400081D64D /* SingleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABAA7E519C20D400081D64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABAA7E619C20D400081D64D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		FABAA7D819C20D400081D64D = {
 			isa = PBXGroup;
 			children = (
+				FA4A0F631C386F07008F1599 /* GitHubDetails.swift */,
 				FABAA80919C2472E0081D64D /* GitHubRepositoryTest.swift */,
 				FABAA80619C244B30081D64D /* GitHubRepository.swift */,
 				FABAA7E319C20D400081D64D /* SingleView */,
@@ -219,6 +223,7 @@
 				FABAA80C19C247B40081D64D /* GitHubRepository.swift in Sources */,
 				FABAA7E919C20D400081D64D /* ViewController.swift in Sources */,
 				FABAA7E719C20D400081D64D /* AppDelegate.swift in Sources */,
+				FA4A0F641C386F07008F1599 /* GitHubDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +234,7 @@
 				FABAA80819C244B30081D64D /* GitHubRepository.swift in Sources */,
 				FABAA80B19C2472E0081D64D /* GitHubRepositoryTest.swift in Sources */,
 				FABAA7FD19C20D400081D64D /* SingleViewTests.swift in Sources */,
+				FA4A0F651C386F07008F1599 /* GitHubDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
