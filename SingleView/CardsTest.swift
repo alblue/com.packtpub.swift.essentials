@@ -27,4 +27,8 @@ class CardsTest:XCTestCase {
 		var clubs:Suit = .Clubs
 		XCTAssertEqual(suit_clubs,clubs,"Clubs are equal")
 	}
+	func testRank() {
+		XCTAssertEqual(Rank.Two.toRaw(),2,"Rank.Two == 2")
+		XCTAssertEqual(Rank.fromRaw(14)!,Rank.Ace,"Rank.fromRaw(14)! ==  Rank.Ace")
+	}
 }
