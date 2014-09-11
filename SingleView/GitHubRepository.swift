@@ -20,10 +20,12 @@
 // THE SOFTWARE.
 
 class GitHubRepository {
+	// causes an error in Swift 1.0
+	class let api = "https://api.github.com"
 	var id:UInt64 = 0
 	var name:String = ""
 	func detailsURL() -> String {
-		return "https://api.github.com/repositories/\(id)"
+		return "\(api)/repositories/\(id)"
 	}
 }
 
