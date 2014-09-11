@@ -19,20 +19,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-class GitHubRepository:GitHubDetails {
-	class var api:String {
-		get {
-			return "https://api.github.com"
-		}
-	}
-	var id:UInt64 = 0
-	var name:String = ""
-	func detailsURL() -> String {
-		return "\(GitHubRepository.api)/repositories/\(id)"
-	}
+protocol GitHubDetails {
+	func detailsURL() -> String
 }
 
-// var repo = GitHubRepository()
-// repo.id = 1
-// repo.name = Grit
-// repo.detailsURL() == https://api.github.com/repositories/1
