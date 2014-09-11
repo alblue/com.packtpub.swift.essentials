@@ -26,3 +26,21 @@ enum Suit {
 
 // var suit:Suit = Suit.Clubs
 // var suit:Suit = .Clubs
+
+enum Rank:Int {
+	case Two = 2, Three, Four, Five
+	case Six, Seven, Eight, Nine, Ten
+	case Jack, Queen, King, Ace
+}
+
+// Rank.Two.rawValue == 2
+// Rank(rawValue:14)! == Rank.Ace
+
+enum Card {
+	case Face(Rank,Suit)
+	case Joker
+}
+
+// var aceOfSpades:Card = .Face(.Ace,.Spades)
+// var twoOfHearts:Card = .Face(.Two,.Hearts)
+// var theJoker:Card = .Joker
