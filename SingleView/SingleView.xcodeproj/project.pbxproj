@@ -15,6 +15,11 @@
 		FABAA80819C244B30081D64D /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80619C244B30081D64D /* GitHubRepository.swift */; };
 		FABAA80B19C2472E0081D64D /* GitHubRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80919C2472E0081D64D /* GitHubRepositoryTest.swift */; };
 		FABAA80C19C247B40081D64D /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80619C244B30081D64D /* GitHubRepository.swift */; };
+		FABAA80E19C2487B0081D64D /* GitHubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80D19C2487B0081D64D /* GitHubDetails.swift */; };
+		FABAA80F19C2487B0081D64D /* GitHubDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA80D19C2487B0081D64D /* GitHubDetails.swift */; };
+		FABAA81119C249110081D64D /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA81019C249110081D64D /* Cards.swift */; };
+		FABAA81219C249110081D64D /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA81019C249110081D64D /* Cards.swift */; };
+		FABAA81419C249830081D64D /* CardsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAA81319C249830081D64D /* CardsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,9 @@
 		FABAA7FC19C20D400081D64D /* SingleViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewTests.swift; sourceTree = "<group>"; };
 		FABAA80619C244B30081D64D /* GitHubRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
 		FABAA80919C2472E0081D64D /* GitHubRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryTest.swift; sourceTree = "<group>"; };
+		FABAA80D19C2487B0081D64D /* GitHubDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubDetails.swift; sourceTree = "<group>"; };
+		FABAA81019C249110081D64D /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		FABAA81319C249830081D64D /* CardsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,9 @@
 		FABAA7D819C20D400081D64D = {
 			isa = PBXGroup;
 			children = (
+				FABAA81319C249830081D64D /* CardsTest.swift */,
+				FABAA81019C249110081D64D /* Cards.swift */,
+				FABAA80D19C2487B0081D64D /* GitHubDetails.swift */,
 				FABAA80919C2472E0081D64D /* GitHubRepositoryTest.swift */,
 				FABAA80619C244B30081D64D /* GitHubRepository.swift */,
 				FABAA7E319C20D400081D64D /* SingleView */,
@@ -215,9 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABAA81119C249110081D64D /* Cards.swift in Sources */,
 				FABAA80C19C247B40081D64D /* GitHubRepository.swift in Sources */,
 				FABAA7E919C20D400081D64D /* ViewController.swift in Sources */,
 				FABAA7E719C20D400081D64D /* AppDelegate.swift in Sources */,
+				FABAA80E19C2487B0081D64D /* GitHubDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABAA81219C249110081D64D /* Cards.swift in Sources */,
 				FABAA80819C244B30081D64D /* GitHubRepository.swift in Sources */,
 				FABAA80B19C2472E0081D64D /* GitHubRepositoryTest.swift in Sources */,
+				FABAA81419C249830081D64D /* CardsTest.swift in Sources */,
 				FABAA7FD19C20D400081D64D /* SingleViewTests.swift in Sources */,
+				FABAA80F19C2487B0081D64D /* GitHubDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
