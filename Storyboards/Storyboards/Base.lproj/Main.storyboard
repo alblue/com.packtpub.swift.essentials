@@ -49,7 +49,7 @@
         <!--Message-->
         <scene sceneID="oTl-ai-MxJ">
             <objects>
-                <viewController id="H6k-lt-RRG" userLabel="Message" sceneMemberID="viewController">
+                <viewController id="H6k-lt-RRG" userLabel="Message" customClass="MessageViewController" customModule="Storyboards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mHA-kF-tIJ"/>
                         <viewControllerLayoutGuide type="bottom" id="XG5-aD-CYZ"/>
