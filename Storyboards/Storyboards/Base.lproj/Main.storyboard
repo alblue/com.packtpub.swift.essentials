@@ -68,6 +68,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Joh-g8-zfr"/>
+                    <connections>
+                        <outlet property="message" destination="UJW-Ql-bj0" id="r6N-2d-bqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipg-VK-a8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
