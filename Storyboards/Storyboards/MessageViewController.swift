@@ -22,6 +22,15 @@
 import UIKit
 
 class MessageViewController: UIViewController {
+
+	let messages = [
+		"Ouch, that hurts",
+		"Please don't do that again",
+		"Why did you press that?",
+	]
+	@IBAction func changeMessage(sender: AnyObject) {
+		message.text = messages[Int(arc4random_uniform(UInt32(messages.count)))]
+	}
 	@IBOutlet weak var message: UILabel!
 	override func viewDidLoad() {
 		let red = CGFloat(drand48())
