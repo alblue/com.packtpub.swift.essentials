@@ -13,6 +13,7 @@
 		FA196ACC19C4EBA8007C8078 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA196ACB19C4EBA8007C8078 /* Images.xcassets */; };
 		FA196ACF19C4EBA8007C8078 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA196ACD19C4EBA8007C8078 /* LaunchScreen.xib */; };
 		FA196ADB19C4EBA9007C8078 /* StoryboardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA196ADA19C4EBA9007C8078 /* StoryboardsTests.swift */; };
+		FACB8D1D19C62860006F927C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8D1C19C62860006F927C /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FA196AD419C4EBA9007C8078 /* StoryboardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryboardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA196AD919C4EBA9007C8078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA196ADA19C4EBA9007C8078 /* StoryboardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsTests.swift; sourceTree = "<group>"; };
+		FACB8D1C19C62860006F927C /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				FA196ACB19C4EBA8007C8078 /* Images.xcassets */,
 				FA196ACD19C4EBA8007C8078 /* LaunchScreen.xib */,
 				FA196AC219C4EBA8007C8078 /* Supporting Files */,
+				FACB8D1C19C62860006F927C /* MessageViewController.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA196AC719C4EBA8007C8078 /* ViewController.swift in Sources */,
+				FACB8D1D19C62860006F927C /* MessageViewController.swift in Sources */,
 				FA196AC519C4EBA8007C8078 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				FA196AE019C4EBA9007C8078 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA196AE119C4EBA9007C8078 /* Build configuration list for PBXNativeTarget "StoryboardsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				FA196AE319C4EBA9007C8078 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
