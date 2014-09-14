@@ -22,11 +22,12 @@
 import UIKit
 
 class MessageViewController: UIViewController {
+	@IBOutlet weak var message: UILabel!
 	override func viewDidLoad() {
 		let red = CGFloat(drand48())
 		let green = CGFloat(drand48())
 		let blue = CGFloat(drand48())
-		view.backgroundColor = UIColor(
+		message.backgroundColor = UIColor(
 			red:red,
 			green:green,
 			blue:blue,
@@ -34,4 +35,3 @@ class MessageViewController: UIViewController {
 		)
 	}
 }
-
