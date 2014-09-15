@@ -28,7 +28,7 @@ class MessageViewController: UIViewController {
 		"Please don't do that again",
 		"Why did you press that?",
 	]
-	@IBAction func changeMessage(sender: AnyObject) {
+	@IBAction func changeMessage() {
 		message.text = messages[Int(arc4random_uniform(UInt32(messages.count)))]
 	}
 	@IBOutlet weak var message: UILabel!
