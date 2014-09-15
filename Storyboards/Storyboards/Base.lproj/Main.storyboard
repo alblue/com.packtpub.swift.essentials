@@ -64,7 +64,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeMessage:" destination="H6k-lt-RRG" eventType="touchUpInside" id="XTt-8b-5tN"/>
+                                    <action selector="changeMessage" destination="H6k-lt-RRG" eventType="touchUpInside" id="6Ws-Rc-aL6"/>
                                 </connections>
                             </button>
                         </subviews>
