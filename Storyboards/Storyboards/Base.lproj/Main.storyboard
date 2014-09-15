@@ -26,8 +26,8 @@
                                     <rect key="frame" x="133" y="189" width="134" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-2s-xcq">
-                                <rect key="frame" x="158" y="68" width="64" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-2s-xcq">
+                                <rect key="frame" x="162" y="68" width="64" height="30"/>
                                 <state key="normal" title="Press Me">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,8 +41,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZdA-2s-xcq" firstAttribute="baseline" secondItem="oTo-Wi-qrb" secondAttribute="baseline" id="1u5-EQ-n3u"/>
                             <constraint firstItem="oTo-Wi-qrb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1y7-SL-aRo"/>
                             <constraint firstItem="oTo-Wi-qrb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="FRc-ox-YXG"/>
+                            <constraint firstItem="ZdA-2s-xcq" firstAttribute="leading" secondItem="oTo-Wi-qrb" secondAttribute="trailing" constant="8" symbolic="YES" id="MWO-sR-oxE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="REY-S6-pLW"/>
