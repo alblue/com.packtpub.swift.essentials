@@ -35,6 +35,12 @@ class MessageViewController: UIViewController {
 	@IBAction func about(sender: AnyObject) {
 		performSegueWithIdentifier("about", sender: sender)
 	}
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "about" {
+			let dest = segue.destinationViewController as UIViewController
+			dest.view.backgroundColor = message.backgroundColor
+		}
+	}
 	override func viewDidLoad() {
 		let red = CGFloat(drand48())
 		let green = CGFloat(drand48())
