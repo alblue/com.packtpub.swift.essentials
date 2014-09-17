@@ -32,6 +32,9 @@ class MessageViewController: UIViewController {
 		message.text = messages[Int(arc4random_uniform(UInt32(messages.count)))]
 	}
 	@IBOutlet weak var message: UILabel!
+	@IBAction func about(sender: AnyObject) {
+		performSegueWithIdentifier("about", sender: sender)
+	}
 	override func viewDidLoad() {
 		let red = CGFloat(drand48())
 		let green = CGFloat(drand48())
