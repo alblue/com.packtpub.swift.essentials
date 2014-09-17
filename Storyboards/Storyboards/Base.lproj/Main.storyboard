@@ -67,17 +67,53 @@
                                     <action selector="changeMessage" destination="H6k-lt-RRG" eventType="touchUpInside" id="6Ws-Rc-aL6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bis-jb-Nyw">
+                                <rect key="frame" x="16" y="139" width="42" height="30"/>
+                                <state key="normal" title="About">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="about:" destination="H6k-lt-RRG" eventType="touchUpInside" id="s20-UK-J7N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Joh-g8-zfr"/>
                     <connections>
                         <outlet property="message" destination="UJW-Ql-bj0" id="r6N-2d-bqB"/>
+                        <segue destination="tFi-VL-94D" kind="show" identifier="about" id="gYj-W7-eFJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipg-VK-a8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2419" y="-68"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="aSG-uP-b2W">
+            <objects>
+                <viewController id="tFi-VL-94D" userLabel="About" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mp2-ED-STW"/>
+                        <viewControllerLayoutGuide type="bottom" id="GfZ-ek-mDw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EW7-OL-Sv4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About this App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbU-G3-VWs">
+                                <rect key="frame" x="16" y="72" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REr-bq-Tap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3076" y="-68"/>
         </scene>
         <!--Initial-->
         <scene sceneID="pfe-Kw-2nX">
