@@ -27,4 +27,9 @@ class CounterView:UIView {
 		let count = (sender as! UIStepper).value
 		label.text = "Count is \(count)"
 	}
+	override func intrinsicContentSize() -> CGSize {
+		let height = max(50,label.intrinsicContentSize().height)
+		let width = max(300,label.intrinsicContentSize().width)
+		return CGSize(width: width, height: height)
+	}
 }
