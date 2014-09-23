@@ -34,6 +34,7 @@ class SampleTable: UITableViewController {
 		let objects = xib.instantiateWithOwner(self, options:nil)
 		let counter = objects.first as? UIView
 		tableView.tableHeaderView = counter
+		tableView.tableFooterView = xib.instantiateWithOwner(self,options:nil).first as? UIView
 	}
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return items.count
