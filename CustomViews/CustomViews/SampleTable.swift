@@ -29,6 +29,12 @@ class SampleTable: UITableViewController {
 	required init(coder: NSCoder) {
 		super.init(coder:coder)
 	}
+	override func viewDidLoad() {
+		let xib = UINib(nibName:"CounterView",bundle:nil)
+		let objects = xib.instantiateWithOwner(self, options:nil)
+		let counter = objects.first as? UIView
+		super.tableView.tableHeaderView = counter
+	}
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return items.count
 	}
