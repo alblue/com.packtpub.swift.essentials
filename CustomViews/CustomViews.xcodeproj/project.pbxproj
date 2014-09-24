@@ -15,6 +15,7 @@
 		FA46C89B19CF921A004F456E /* SampleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46C89A19CF921A004F456E /* SampleTable.swift */; };
 		FA46C89D19D0DA10004F456E /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA46C89C19D0DA10004F456E /* CounterView.xib */; };
 		FA46C89F19D0E22C004F456E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46C89E19D0E22C004F456E /* CounterView.swift */; };
+		FA6413E819D3766400CBC5E9 /* TwoLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6413E719D3766400CBC5E9 /* TwoLabels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		FA46C89A19CF921A004F456E /* SampleTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTable.swift; sourceTree = "<group>"; };
 		FA46C89C19D0DA10004F456E /* CounterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
 		FA46C89E19D0E22C004F456E /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		FA6413E719D3766400CBC5E9 /* TwoLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				FA46C78219CF1764004F456E /* AppDelegate.swift */,
-				FA46C78819CF1764004F456E /* Main.storyboard */,
+				FA46C89E19D0E22C004F456E /* CounterView.swift */,
+				FA46C89C19D0DA10004F456E /* CounterView.xib */,
 				FA46C78B19CF1764004F456E /* Images.xcassets */,
 				FA46C78D19CF1764004F456E /* LaunchScreen.xib */,
-				FA46C78019CF1764004F456E /* Supporting Files */,
+				FA46C78819CF1764004F456E /* Main.storyboard */,
 				FA46C89A19CF921A004F456E /* SampleTable.swift */,
-				FA46C89C19D0DA10004F456E /* CounterView.xib */,
-				FA46C89E19D0E22C004F456E /* CounterView.swift */,
+				FA46C78019CF1764004F456E /* Supporting Files */,
+				FA6413E719D3766400CBC5E9 /* TwoLabels.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				FA46C89B19CF921A004F456E /* SampleTable.swift in Sources */,
 				FA46C78319CF1764004F456E /* AppDelegate.swift in Sources */,
 				FA46C89F19D0E22C004F456E /* CounterView.swift in Sources */,
+				FA6413E819D3766400CBC5E9 /* TwoLabels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
