@@ -23,6 +23,8 @@ import UIKit
 
 class ProgessView: UIView {
 	let circle = CAShapeLayer()
+	let square = CAShapeLayer()
+	let black = UIColor.blackColor().CGColor
 	required init?(coder: NSCoder) {
 		super.init(coder:coder)
 		setupView()
@@ -32,13 +34,18 @@ class ProgessView: UIView {
 		setupView()
 	}
 	func setupView() {
-		circle.strokeColor = UIColor.blackColor().CGColor
-		circle.fillColor = nil
-		self.layer.addSublayer(circle)
+		for layer in [square, circle] {
+			layer.strokeColor = black
+			layer.fillColor = nil
+			self.layer.addSublayer(layer)
+		}
 		configureView()
 	}
 	func configureView() {
 		let rect = self.bounds
+		let sq = rect.insetBy(dx: rect.width/3, dy: rect.height/3)
+		square.fillColor = black
+		square.path = UIBezierPath(rect: sq).CGPath
 		circle.path = UIBezierPath(ovalInRect: rect).CGPath
 	}
 }
