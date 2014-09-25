@@ -31,15 +31,16 @@ class SquaresView: UIView {
 		setupView()
 	}
 	func setupView() {
+		contentMode = .Redraw
 	}
 	override func drawRect(rect: CGRect) {
 		let context = UIGraphicsGetCurrentContext()
 		let red = UIColor.redColor().CGColor
 		CGContextSetStrokeColorWithColor(context,red)
-		CGContextStrokeRect(context, CGRect(x:50, y:50, width:100, height:100))
+		CGContextStrokeRect(context, CGRect(x:center.x - 50, y:center.y - 50, width:100, height:100))
 		UIColor.greenColor().setFill()
 		UIColor.blackColor().setStroke()
-		CGContextFillRect(context, CGRect(x:75, y:75, width:50, height:50))
-		CGContextStrokeRect(context, CGRect(x:75, y:75, width:50, height:50))
+		CGContextFillRect(context, CGRect(x:center.x - 25, y:center.y - 25, width:50, height:50))
+		CGContextStrokeRect(context, CGRect(x:center.x - 25, y:center.y - 25, width:50, height:50))
 	}
 }
