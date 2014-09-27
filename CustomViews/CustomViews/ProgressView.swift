@@ -24,6 +24,8 @@ import UIKit
 class ProgessView: UIView {
 	let circle = CAShapeLayer()
 	let square = CAShapeLayer()
+	let progress = CAShapeLayer()
+	var progressAmount: CGFloat = 0.5
 	let black = UIColor.blackColor().CGColor
 	required init?(coder: NSCoder) {
 		super.init(coder:coder)
@@ -34,11 +36,13 @@ class ProgessView: UIView {
 		setupView()
 	}
 	func setupView() {
-		for layer in [square, circle] {
+		for layer in [progress, square, circle] {
 			layer.strokeColor = black
 			layer.fillColor = nil
 			self.layer.addSublayer(layer)
 		}
+		progress.lineWidth = 10
+		progress.strokeColor = UIColor.redColor().CGColor
 		configureView()
 	}
 	func configureView() {
@@ -47,5 +51,10 @@ class ProgessView: UIView {
 		square.fillColor = black
 		square.path = UIBezierPath(rect: sq).CGPath
 		circle.path = UIBezierPath(ovalInRect: rect).CGPath
+		let radius = min(rect.width, rect.height)/2
+		let center = CGPoint(x: rect.midX, y: rect.midY)
+		progress.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat(3 * M_PI_2), clockwise: true).CGPath
+		progress.strokeStart = 0
+		progress.strokeEnd = progressAmount
 	}
 }
