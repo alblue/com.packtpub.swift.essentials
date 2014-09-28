@@ -25,7 +25,7 @@ import UIKit
 	let circle = CAShapeLayer()
 	let square = CAShapeLayer()
 	let progress = CAShapeLayer()
-	var progressAmount: CGFloat = 0.5
+	@IBInspectable var progressAmount: CGFloat = 0.5
 	let mask = CAShapeLayer()
 	let black = UIColor.blackColor().CGColor
 	required init?(coder: NSCoder) {
