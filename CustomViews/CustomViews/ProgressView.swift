@@ -25,7 +25,11 @@ import UIKit
 	let circle = CAShapeLayer()
 	let square = CAShapeLayer()
 	let progress = CAShapeLayer()
-	@IBInspectable var progressAmount: CGFloat = 0.5
+	@IBInspectable var progressAmount: CGFloat = 0.5 {
+		didSet {
+			setNeedsLayout()
+		}
+	}
 	let mask = CAShapeLayer()
 	let black = UIColor.blackColor().CGColor
 	required init?(coder: NSCoder) {
@@ -62,5 +66,12 @@ import UIKit
 	}
 	override func layoutSubviews() {
 		setupView()
+	}
+	@IBAction func setProgress(sender:AnyObject) {
+		switch sender {
+		case let slider as UISlider: progressAmount = CGFloat(slider.value)
+		case let stepper as UIStepper: progressAmount = CGFloat(stepper.value)
+		default: break
+		}
 	}
 }

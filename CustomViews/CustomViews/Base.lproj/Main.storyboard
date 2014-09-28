@@ -99,9 +99,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rrA-aW-enN">
+                                <rect key="frame" x="92" y="30" width="104" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XGw-Ze-FLW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setProgress:" destination="eap-DM-bLt" eventType="valueChanged" id="8e4-pa-rCq"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eap-DM-bLt" firstAttribute="centerY" secondItem="rrA-aW-enN" secondAttribute="centerY" id="6th-0N-kW8"/>
+                            <constraint firstItem="rrA-aW-enN" firstAttribute="leading" secondItem="eap-DM-bLt" secondAttribute="trailing" constant="8" id="8bP-0W-KXA"/>
                             <constraint firstItem="eap-DM-bLt" firstAttribute="top" secondItem="ykr-hX-vI5" secondAttribute="topMargin" constant="20" id="Zuf-wK-hVV"/>
                             <constraint firstItem="eap-DM-bLt" firstAttribute="leading" secondItem="ykr-hX-vI5" secondAttribute="leadingMargin" constant="20" id="hC5-Av-3mB"/>
                         </constraints>
