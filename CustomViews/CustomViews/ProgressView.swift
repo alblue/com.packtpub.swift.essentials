@@ -21,7 +21,7 @@
 
 import UIKit
 
-class ProgessView: UIView {
+@IBDesignable class ProgessView: UIView {
 	let circle = CAShapeLayer()
 	let square = CAShapeLayer()
 	let progress = CAShapeLayer()
@@ -59,5 +59,8 @@ class ProgessView: UIView {
 		progress.strokeEnd = progressAmount
 		mask.path = UIBezierPath(ovalInRect: rect).CGPath
 		progress.mask = mask
+	}
+	override func layoutSubviews() {
+		updateUI()
 	}
 }
