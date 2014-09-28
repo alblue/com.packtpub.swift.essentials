@@ -26,6 +26,7 @@ class ProgessView: UIView {
 	let square = CAShapeLayer()
 	let progress = CAShapeLayer()
 	var progressAmount: CGFloat = 0.5
+	let mask = CAShapeLayer()
 	let black = UIColor.blackColor().CGColor
 	required init?(coder: NSCoder) {
 		super.init(coder:coder)
@@ -56,5 +57,7 @@ class ProgessView: UIView {
 		progress.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat(3 * M_PI_2), clockwise: true).CGPath
 		progress.strokeStart = 0
 		progress.strokeEnd = progressAmount
+		mask.path = UIBezierPath(ovalInRect: rect).CGPath
+		progress.mask = mask
 	}
 }
