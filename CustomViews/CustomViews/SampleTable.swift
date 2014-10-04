@@ -37,6 +37,15 @@ class SampleTable: UITableViewController {
 		let footer = UITableViewHeaderFooterView()
 		footer.contentView.addSubview(TwoLabels(frame:CGRect.zeroRect))
 		super.tableView.tableFooterView = footer
+		let url = NSURL(string: "https://raw.githubusercontent.com/alblue/com.packtpub.swift.essentials/master/CustomViews/CustomViews/SampleTable.json")!
+		let session = NSURLSession.sharedSession()
+		let encoding = NSUTF8StringEncoding
+		let task = session.dataTaskWithURL(url, completionHandler: {data,response,error -> Void in
+			let contents = String(NSString(data: data, encoding:encoding)!)
+			self.items += [(url.absoluteString!,contents)]
+			self.tableView.reloadData()
+		})
+		task.resume()
 	}
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return items.count
