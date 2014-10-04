@@ -42,8 +42,16 @@ class SampleTable: UITableViewController {
 		let encoding = NSUTF8StringEncoding
 		let task = session.dataTaskWithURL(url, completionHandler: {data,response,error -> Void in
 			if (error == nil) {
-				let contents = String(NSString(data: data, encoding:encoding))
-				self.items += [(url.absoluteString!,contents)]
+				let httpResponse = response as NSHTTPURLResponse
+				let statusCode = httpResponse.statusCode
+				if (statusCode >= 400 && statusCode < 500) {
+					self.items += [("Client error \(statusCode)",url.absoluteString!)]
+				} else if (statusCode >= 500) {
+					self.items += [("Server error \(statusCode)",url.absoluteString!)]
+				} else {
+					let contents = String(NSString(data: data, encoding:encoding))
+					self.items += [(url.absoluteString!,contents)]
+				}
 			} else {
 				self.items += [("Error",error.localizedDescription)]
 			}
