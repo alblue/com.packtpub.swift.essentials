@@ -41,8 +41,13 @@ class SampleTable: UITableViewController {
 		let session = NSURLSession.sharedSession()
 		let encoding = NSUTF8StringEncoding
 		let task = session.dataTaskWithURL(url, completionHandler: {data,response,error -> Void in
-			let contents = String(data: data!, encoding:encoding)!
-			self.items += [(url.absoluteString,contents)]
+			if error == nil {
+
+				let contents = String(data: data!, encoding:encoding)!
+				self.items += [(url.absoluteString,contents)]
+			} else {
+				self.items += [("Error",error!.localizedDescription)]
+			}
 			self.tableView.reloadData()
 		})
 		task.resume()
