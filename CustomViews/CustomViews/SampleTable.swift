@@ -58,7 +58,9 @@ class SampleTable: UITableViewController {
 			}
 			let contents = String(data:data!,encoding:encoding)!
 			self.items += [(url.absoluteString,contents)]
-			self.tableView.reloadData()
+			dispatch_async(dispatch_get_main_queue(), {
+				self.tableView.reloadData()
+			})
 		})
 		task.resume()
 	}
