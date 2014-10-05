@@ -39,7 +39,6 @@ class SampleTable: UITableViewController {
 		super.tableView.tableFooterView = footer
 		let url = NSURL(string: "https://raw.githubusercontent.com/alblue/com.packtpub.swift.essentials/master/CustomViews/CustomViews/SampleTable.json")!
 		let session = NSURLSession.sharedSession()
-		let encoding = NSUTF8StringEncoding
 		let task = session.dataTaskWithURL(url, completionHandler: {data,response,error -> Void in
 			switch (data,response,error) {
 			case (_,_,let e) where e != nil:
@@ -47,8 +46,10 @@ class SampleTable: UITableViewController {
 			case (_,let r as NSHTTPURLResponse,_) where r.statusCode >= 400 && r.statusCode < 600:
 				self.items += [("Error \(r.statusCode)",url.absoluteString!)]
 			default:
-				let contents = String(NSString(data: data, encoding:encoding)!)
-				self.items += [(url.absoluteString!,contents)]
+				let parsed = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as NSArray!
+				for entry in parsed {
+					self.items += [(entry["title"] as String, entry["content"] as String)]
+				}
 			}
 			self.runOnUIThread {
 				self.tableView.backgroundColor = UIColor.redColor()
