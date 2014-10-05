@@ -55,9 +55,17 @@ class SampleTable: UITableViewController {
 					url.absoluteString)]
 				return
 			}
-			let parsed = try? NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments) as! NSArray
-			for entry in parsed! {
-				self.items += [(entry["title"] as! String, entry["content"] as! String)]
+			if let parsed = try? NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments) as! NSArray {
+				for entry in parsed {
+					switch (entry["title"], entry["content"]) {
+					case (let title as String, let content as String):
+      self.items += [(title,content)]
+					default:
+      self.items += [("Error", "Missing unknown entry")]
+					}
+				}
+			} else {
+				self.items += [("Error", "JSON is not an array")]
 			}
 			self.runOnUIThread {
 				self.tableView.backgroundColor = UIColor.redColor()
