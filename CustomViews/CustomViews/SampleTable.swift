@@ -46,9 +46,22 @@ class SampleTable: UITableViewController {
 			case (_,let r as NSHTTPURLResponse,_) where r.statusCode >= 400 && r.statusCode < 600:
 				self.items += [("Error \(r.statusCode)",url.absoluteString!)]
 			default:
-				let parsed = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as NSArray!
-				for entry in parsed {
-					self.items += [(entry["title"] as String, entry["content"] as String)]
+				var error:NSError? = nil
+				if let parsed:AnyObject = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:&error) {
+					if let array = parsed as? NSArray {
+						for entry in array {
+							switch (entry["title"], entry["content"]) {
+							case (let title as String, let content as String):
+								self.items += [(title,content)]
+							default:
+								self.items += [("Error", "Missing unknown entry")]
+							}
+						}
+					} else {
+						self.items += [("Error", "JSON is not an array")]
+					}
+				} else {
+					self.items += [("Error", "Cannot parse JSON \(error!.localizedDescription)")]
 				}
 			}
 			self.runOnUIThread {
