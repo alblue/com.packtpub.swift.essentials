@@ -44,10 +44,12 @@ class SampleTable: UITableViewController {
 			switch (data,response,error) {
 			case (_,_,let e) where e != nil:
 				self.items += [("Error",error.localizedDescription)]
-			case (_,let r as NSHTTPURLResponse,_) where r.statusCode >= 400 && r.statusCode < 500:
-				self.items += [("Client error \(r.statusCode)",url.absoluteString!)]
-			case (_,let r as NSHTTPURLResponse,_) where r.statusCode >= 500:
-				self.items += [("Server error \(r.statusCode)",(url.absoluteString!)]
+			case (_,let r as NSHTTPURLResponse,_) where r.statusCode >= 400 && r.statusCode < 600:
+				self.items += [("Error \(r.statusCode)",url.absoluteString!)]
+				/* This causes a build error on Xcode 6.0.1, so commented out
+				* case (_,let r as NSHTTPURLResponse,_) where r.statusCode >= 500:
+				* self.items += ["Server error \(r.statusCode)",(url.absoluteString!)]
+				*/
 			default:
 				let contents = String(NSString(data: data, encoding:encoding))
 				self.items += [(url.absoluteString!,contents)]
