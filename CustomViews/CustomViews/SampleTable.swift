@@ -58,11 +58,20 @@ class SampleTable: UITableViewController {
 			}
 			let contents = String(data:data!,encoding:encoding)!
 			self.items += [(url.absoluteString,contents)]
-			dispatch_async(dispatch_get_main_queue(), {
+			self.runOnUIThread {
+				self.tableView.backgroundColor = UIColor.redColor()
 				self.tableView.reloadData()
-			})
+				self.tableView.backgroundColor = UIColor.greenColor()
+			}
 		})
 		task.resume()
+	}
+	func runOnUIThread(fn:()->()) {
+		if NSThread.isMainThread() {
+			fn()
+		} else {
+			dispatch_async(dispatch_get_main_queue(), fn)
+		}
 	}
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return items.count
