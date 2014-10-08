@@ -75,6 +75,12 @@ class SampleTable: UITableViewController {
 			}
 		})
 		task.resume()
+		session.dataTaskWithURL(NSURL(string:"http://alblue.bandlem.com/Tag/swift/atom.xml"), completionHandler: {data,response,error -> Void in
+			if data != nil {
+				self.items += FeedParser(data).items
+				self.runOnUIThread(self.tableView.reloadData)
+			}
+		}).resume()
 	}
 	func runOnUIThread(fn:()->()) {
 		if(NSThread.isMainThread()) {
