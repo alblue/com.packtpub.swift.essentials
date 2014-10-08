@@ -18,6 +18,7 @@
 		FA46C89D19D0DA10004F456E /* CounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA46C89C19D0DA10004F456E /* CounterView.xib */; };
 		FA46C89F19D0E22C004F456E /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46C89E19D0E22C004F456E /* CounterView.swift */; };
 		FA6413E819D3766400CBC5E9 /* TwoLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6413E719D3766400CBC5E9 /* TwoLabels.swift */; };
+		FAE2876519E6000300F3EBAA /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2876419E6000300F3EBAA /* FeedParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FA46C89C19D0DA10004F456E /* CounterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CounterView.xib; sourceTree = "<group>"; };
 		FA46C89E19D0E22C004F456E /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		FA6413E719D3766400CBC5E9 /* TwoLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoLabels.swift; sourceTree = "<group>"; };
+		FAE2876419E6000300F3EBAA /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				FA46C78219CF1764004F456E /* AppDelegate.swift */,
 				FA46C89E19D0E22C004F456E /* CounterView.swift */,
 				FA46C89C19D0DA10004F456E /* CounterView.xib */,
+				FAE2876419E6000300F3EBAA /* FeedParser.swift */,
 				FA46C78B19CF1764004F456E /* Images.xcassets */,
 				FA46C78D19CF1764004F456E /* LaunchScreen.xib */,
 				FA46C78819CF1764004F456E /* Main.storyboard */,
@@ -231,6 +234,7 @@
 				FA46C89B19CF921A004F456E /* SampleTable.swift in Sources */,
 				FA46C78319CF1764004F456E /* AppDelegate.swift in Sources */,
 				FA46C89F19D0E22C004F456E /* CounterView.swift in Sources */,
+				FAE2876519E6000300F3EBAA /* FeedParser.swift in Sources */,
 				FA6413E819D3766400CBC5E9 /* TwoLabels.swift in Sources */,
 				FA1CB6CA19D4B5C3006300F7 /* SquaresView.swift in Sources */,
 				FA1CB6CC19D4CB8A006300F7 /* ProgressView.swift in Sources */,
