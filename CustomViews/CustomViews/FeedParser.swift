@@ -22,7 +22,49 @@
 import Foundation
 
 class FeedParser: NSObject, NSXMLParserDelegate {
+	var inEntry:Bool = false
+	var inTitle:Bool = false
+	var title:String?
+	var link:String?
 	var items:[(String,String)] = []
 	init(_ data:NSData) {
+		let parser = NSXMLParser(data: data);
+		parser.shouldProcessNamespaces = true
+		super.init()
+		parser.delegate = self
+		// If you get an EXC_BAD_ACCESS on the parse()
+		// line, check your delegate methods are declared
+		// to allow implicitly unwrapped optionals since
+		// sometimes these values may be nil
+		parser.parse()
+	}
+	func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName: String?, attributes: [String:String]) {
+		switch elementName {
+		case "entry":
+			inEntry = true
+		case "title":
+			inTitle = true
+		case "link":
+			link = attributes["href"]
+		default: break
+		}
+	}
+	func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName: String?) {
+		switch elementName {
+		case "entry":
+			inEntry = false
+			if title != nil && link != nil {
+				items += [(title!,link!)]
+			}
+			title = nil
+			link = nil
+		case "title": inTitle = false
+		default: break
+		}
+	}
+	func parser(parser: NSXMLParser, foundCharacters string: String) {
+		if inEntry && inTitle {
+			title = string
+		}
 	}
 }
