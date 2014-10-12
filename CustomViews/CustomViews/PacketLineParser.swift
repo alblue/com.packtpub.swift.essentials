@@ -43,10 +43,32 @@ class PacketLineParser: NSObject, NSStreamDelegate {
 			if let line = input.readPacketLineString() {
 				callback(line)
 			} else {
+				closeStreams(input,output)
+			}
+		}
+		if handleEvent == NSStreamEvent.EndEncountered || handleEvent == NSStreamEvent.ErrorOccurred {
+			closeStreams(input,output)
+		}
+	}
+	func closeStreams(input:NSInputStream,_ output:NSOutputStream) {
+		// only run this once
+		if capture != nil {
+			// ensure that the capture is released
+			capture = nil
+			// remove from run loop
+			output.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+			input.removeFromRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+			// remove any delegates
+			input.delegate = nil
+			output.delegate = nil
+			// close the streams, if they are not closed already
+			if output.streamStatus != NSStreamStatus.Closed {
+				// send the other client a close message
 				output.writePacketLine()
-				input.close()
 				output.close()
-				capture = nil
+			}
+			if input.streamStatus != NSStreamStatus.Closed {
+				input.close()
 			}
 		}
 	}
