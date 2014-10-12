@@ -81,6 +81,16 @@ class SampleTable: UITableViewController {
 				self.runOnUIThread(self.tableView.reloadData)
 			}
 		}).resume()
+		runOnBackgroundThread {
+			let repo = RemoteGitRepository(host: "github.com", repo: "/alblue/com.packtpub.swift.essentials.git")
+			for (ref,hash) in repo.lsRemote() {
+				self.items += [(ref,hash)]
+			}
+			self.runOnUIThread(self.tableView.reloadData)
+		}
+	}
+	func runOnBackgroundThread(fn:()->()) {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),fn)
 	}
 	func runOnUIThread(fn:()->()) {
 		if(NSThread.isMainThread()) {
