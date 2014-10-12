@@ -82,10 +82,19 @@ class SampleTable: UITableViewController {
 		}).resume()
 		runOnBackgroundThread {
 			let repo = RemoteGitRepository(host: "github.com", repo: "/alblue/com.packtpub.swift.essentials.git")
-			for (ref,hash) in repo.lsRemote() {
-				self.items += [(ref,hash)]
+			// way of forcing true without compiler warnings of unused code
+			let async = arc4random() >= 0
+			if async {
+				repo.lsRemoteAsync() { (ref:String,hash:String) in
+					self.items += [(ref,hash)]
+					self.runOnUIThread(self.tableView.reloadData)
+				}
+			} else {
+				for (ref,hash) in repo.lsRemote() {
+					self.items += [(ref,hash)]
+				}
+				self.runOnUIThread(self.tableView.reloadData)
 			}
-			self.runOnUIThread(self.tableView.reloadData)
 		}
 	}
 	func runOnBackgroundThread(fn:()->()) {
