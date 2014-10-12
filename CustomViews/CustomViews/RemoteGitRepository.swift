@@ -53,5 +53,19 @@ class RemoteGitRepository {
 		}
 		return refs
 	}
+	func lsRemoteAsync(fn:(String,String) -> ()) {
+		if let (input,output) = NSStream.connect(host,port) {
+			input.delegate = PacketLineParser(output) { (response:NSString) -> () in
+				let hash = String(response.substringToIndex(41))
+				let ref = String(response.substringFromIndex(41))
+				if !ref.hasPrefix("HEAD") {
+					fn(ref,hash)
+				}
+			}
+			input.scheduleInRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+			input.open()
+			output.open()
+			output.writePacketLine("git-upload-pack \(repo)\0host=\(host)\0")
+		}
+	}
 }
-
