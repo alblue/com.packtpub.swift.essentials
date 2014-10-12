@@ -23,14 +23,21 @@ import Foundation
 
 extension NSStream {
 	class func open(host:String,_ port:Int) -> (NSInputStream, NSOutputStream)? {
+		if let (input,output) = connect(host,port) {
+			input.open()
+			output.open()
+			return (input,output)
+		} else {
+			return nil
+		}
+	}
+	class func connect(host:String,_ port:Int) -> (NSInputStream, NSOutputStream)? {
 		var input:NSInputStream?
 		var output:NSOutputStream?
 		NSStream.getStreamsToHostWithName(host, port: port, inputStream: &input, outputStream: &output)
 		guard let i = input, o = output else {
 			return nil
 		}
-		o.open()
-		i.open()
 		return (i,o)
 	}
 }
