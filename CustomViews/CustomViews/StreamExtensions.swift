@@ -34,3 +34,44 @@ extension NSStream {
 		return (i,o)
 	}
 }
+
+extension NSInputStream {
+	func readBytes(size:Int) -> [UInt8]? {
+		let buffer = Array<UInt8>(count:size,repeatedValue:0)
+		var completed = 0
+		while completed < size {
+			let read = self.read(UnsafeMutablePointer(buffer) + completed, maxLength: size - completed)
+			if read < 0 {
+				return nil
+			} else {
+				completed += read
+			}
+		}
+		return buffer
+	}
+	func readData(size:Int) -> NSData? {
+		if let buffer = readBytes(size) {
+			return NSData(bytes: UnsafeMutablePointer(buffer), length: buffer.count)
+		} else {
+			return nil
+		}
+	}
+}
+
+extension NSOutputStream {
+	func writeData(data:NSData) -> Int {
+		let size = data.length
+		var completed = 0
+		while completed < size {
+			let wrote = write(UnsafePointer(data.bytes) +
+				completed, maxLength:size - completed)
+			if wrote < 0 {
+				return wrote
+			} else {
+				completed += wrote
+			}
+		}
+		return completed
+	}
+}
+
