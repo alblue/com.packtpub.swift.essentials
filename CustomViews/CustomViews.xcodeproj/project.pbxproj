@@ -11,6 +11,7 @@
 		FA1CB6CC19D4CB8A006300F7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1CB6CB19D4CB8A006300F7 /* ProgressView.swift */; };
 		FA37A64819EA0511009993A0 /* StreamExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A64719EA0511009993A0 /* StreamExtensions.swift */; };
 		FA37A64A19EA0C27009993A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A64919EA0C27009993A0 /* Extensions.swift */; };
+		FA37A65219EA10E2009993A0 /* PacketLineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A65119EA10E2009993A0 /* PacketLineExtensions.swift */; };
 		FA46C78319CF1764004F456E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46C78219CF1764004F456E /* AppDelegate.swift */; };
 		FA46C78A19CF1764004F456E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA46C78819CF1764004F456E /* Main.storyboard */; };
 		FA46C78C19CF1764004F456E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA46C78B19CF1764004F456E /* Images.xcassets */; };
@@ -38,6 +39,7 @@
 		FA1CB6CB19D4CB8A006300F7 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		FA37A64719EA0511009993A0 /* StreamExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamExtensions.swift; sourceTree = "<group>"; };
 		FA37A64919EA0C27009993A0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FA37A65119EA10E2009993A0 /* PacketLineExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacketLineExtensions.swift; sourceTree = "<group>"; };
 		FA46C77D19CF1764004F456E /* CustomViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA46C78119CF1764004F456E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA46C78219CF1764004F456E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				FA46C89C19D0DA10004F456E /* CounterView.xib */,
 				FA37A64919EA0C27009993A0 /* Extensions.swift */,
 				FAE2876419E6000300F3EBAA /* FeedParser.swift */,
+				FA37A65119EA10E2009993A0 /* PacketLineExtensions.swift */,
 				FA46C78B19CF1764004F456E /* Images.xcassets */,
 				FA46C78D19CF1764004F456E /* LaunchScreen.xib */,
 				FA46C78819CF1764004F456E /* Main.storyboard */,
@@ -244,6 +247,7 @@
 				FAE2876519E6000300F3EBAA /* FeedParser.swift in Sources */,
 				FA6413E819D3766400CBC5E9 /* TwoLabels.swift in Sources */,
 				FA37A64819EA0511009993A0 /* StreamExtensions.swift in Sources */,
+				FA37A65219EA10E2009993A0 /* PacketLineExtensions.swift in Sources */,
 				FA1CB6CA19D4B5C3006300F7 /* SquaresView.swift in Sources */,
 				FA1CB6CC19D4CB8A006300F7 /* ProgressView.swift in Sources */,
 			);
