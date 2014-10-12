@@ -12,6 +12,7 @@
 		FA37A64819EA0511009993A0 /* StreamExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A64719EA0511009993A0 /* StreamExtensions.swift */; };
 		FA37A64A19EA0C27009993A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A64919EA0C27009993A0 /* Extensions.swift */; };
 		FA37A65219EA10E2009993A0 /* PacketLineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A65119EA10E2009993A0 /* PacketLineExtensions.swift */; };
+		FA37A65419EA1508009993A0 /* RemoteGitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A65319EA1508009993A0 /* RemoteGitRepository.swift */; };
 		FA46C78319CF1764004F456E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46C78219CF1764004F456E /* AppDelegate.swift */; };
 		FA46C78A19CF1764004F456E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA46C78819CF1764004F456E /* Main.storyboard */; };
 		FA46C78C19CF1764004F456E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA46C78B19CF1764004F456E /* Images.xcassets */; };
@@ -40,6 +41,7 @@
 		FA37A64719EA0511009993A0 /* StreamExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamExtensions.swift; sourceTree = "<group>"; };
 		FA37A64919EA0C27009993A0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA37A65119EA10E2009993A0 /* PacketLineExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacketLineExtensions.swift; sourceTree = "<group>"; };
+		FA37A65319EA1508009993A0 /* RemoteGitRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteGitRepository.swift; sourceTree = "<group>"; };
 		FA46C77D19CF1764004F456E /* CustomViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA46C78119CF1764004F456E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA46C78219CF1764004F456E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +106,9 @@
 				FA46C78B19CF1764004F456E /* Images.xcassets */,
 				FA46C78D19CF1764004F456E /* LaunchScreen.xib */,
 				FA46C78819CF1764004F456E /* Main.storyboard */,
+				FA37A65119EA10E2009993A0 /* PacketLineExtensions.swift */,
 				FA1CB6CB19D4CB8A006300F7 /* ProgressView.swift */,
+				FA37A65319EA1508009993A0 /* RemoteGitRepository.swift */,
 				FA46C89A19CF921A004F456E /* SampleTable.swift */,
 				FA1CB6C919D4B5C3006300F7 /* SquaresView.swift */,
 				FA37A64719EA0511009993A0 /* StreamExtensions.swift */,
@@ -242,6 +246,7 @@
 			files = (
 				FA46C89B19CF921A004F456E /* SampleTable.swift in Sources */,
 				FA37A64A19EA0C27009993A0 /* Extensions.swift in Sources */,
+				FA37A65419EA1508009993A0 /* RemoteGitRepository.swift in Sources */,
 				FA46C78319CF1764004F456E /* AppDelegate.swift in Sources */,
 				FA46C89F19D0E22C004F456E /* CounterView.swift in Sources */,
 				FAE2876519E6000300F3EBAA /* FeedParser.swift in Sources */,
