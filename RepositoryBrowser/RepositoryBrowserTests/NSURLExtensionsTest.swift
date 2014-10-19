@@ -33,4 +33,14 @@ class NSURLExtensionsTest: XCTestCase {
 			XCTAssertEqual(dict["test"] ?? "", "value", "Value is as expected")
 		}
 	}
+	func testNSURLJSONArray() {
+		let json = "[{\"test\":\"value\"}]".dataUsingEncoding(NSUTF8StringEncoding)!
+		let base64 = json.base64EncodedDataWithOptions(nil)
+		let data = NSString(data: base64, encoding: NSUTF8StringEncoding)!
+		let dataURL = NSURL(string:"data:text/plain;base64,\(data)")!
+		dataURL.withJSONArrayOfDictionary {
+			dict in
+			XCTAssertEqual(dict[0]["test"] ?? "", "value", "Value is as expected")
+		}
+	}
 }
