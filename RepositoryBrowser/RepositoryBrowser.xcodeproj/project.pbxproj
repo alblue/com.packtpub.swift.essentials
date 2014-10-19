@@ -14,6 +14,9 @@
 		FAAFE01919F3E4160049E72F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAFE01819F3E4160049E72F /* Images.xcassets */; };
 		FAAFE01C19F3E4160049E72F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAFE01A19F3E4160049E72F /* LaunchScreen.xib */; };
 		FAAFE02819F3E4160049E72F /* RepositoryBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE02719F3E4160049E72F /* RepositoryBrowserTests.swift */; };
+		FAAFE03319F3E8070049E72F /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03119F3E7FD0049E72F /* URITemplate.swift */; };
+		FAAFE03419F3E8080049E72F /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03119F3E7FD0049E72F /* URITemplate.swift */; };
+		FAAFE03619F3EB380049E72F /* URITemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03519F3EB380049E72F /* URITemplateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 		FAAFE02119F3E4160049E72F /* RepositoryBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoryBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAFE02619F3E4160049E72F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAFE02719F3E4160049E72F /* RepositoryBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBrowserTests.swift; sourceTree = "<group>"; };
+		FAAFE03119F3E7FD0049E72F /* URITemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URITemplate.swift; sourceTree = "<group>"; };
+		FAAFE03519F3EB380049E72F /* URITemplateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URITemplateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +85,13 @@
 			isa = PBXGroup;
 			children = (
 				FAAFE00F19F3E4160049E72F /* AppDelegate.swift */,
-				FAAFE01119F3E4160049E72F /* MasterViewController.swift */,
 				FAAFE01319F3E4160049E72F /* DetailViewController.swift */,
-				FAAFE01519F3E4160049E72F /* Main.storyboard */,
 				FAAFE01819F3E4160049E72F /* Images.xcassets */,
 				FAAFE01A19F3E4160049E72F /* LaunchScreen.xib */,
+				FAAFE01519F3E4160049E72F /* Main.storyboard */,
+				FAAFE01119F3E4160049E72F /* MasterViewController.swift */,
 				FAAFE00D19F3E4160049E72F /* Supporting Files */,
+				FAAFE03119F3E7FD0049E72F /* URITemplate.swift */,
 			);
 			path = RepositoryBrowser;
 			sourceTree = "<group>";
@@ -103,6 +109,7 @@
 			children = (
 				FAAFE02719F3E4160049E72F /* RepositoryBrowserTests.swift */,
 				FAAFE02519F3E4160049E72F /* Supporting Files */,
+				FAAFE03519F3EB380049E72F /* URITemplateTests.swift */,
 			);
 			path = RepositoryBrowserTests;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAFE03319F3E8070049E72F /* URITemplate.swift in Sources */,
 				FAAFE01419F3E4160049E72F /* DetailViewController.swift in Sources */,
 				FAAFE01219F3E4160049E72F /* MasterViewController.swift in Sources */,
 				FAAFE01019F3E4160049E72F /* AppDelegate.swift in Sources */,
@@ -227,6 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAFE03619F3EB380049E72F /* URITemplateTests.swift in Sources */,
+				FAAFE03419F3E8080049E72F /* URITemplate.swift in Sources */,
 				FAAFE02819F3E4160049E72F /* RepositoryBrowserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
