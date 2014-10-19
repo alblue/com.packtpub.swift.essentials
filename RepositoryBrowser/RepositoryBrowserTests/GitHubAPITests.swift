@@ -32,6 +32,10 @@ class GitHubAPITests: XCTestCase{
 					array in
 					XCTAssertEqual(22,array.count,"Number of repos")
 				}
+				api.withUserRepos("alblue") {
+					array in
+					XCTAssertEqual(22,array.count,"Number of repos")
+				}
 			} else {
 				XCTAssertFalse(true,"Failed to parse \(url)")
 			}
