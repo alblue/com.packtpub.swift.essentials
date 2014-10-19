@@ -20,6 +20,9 @@
 		FAAFE03819F44DF80049E72F /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03719F44DF80049E72F /* Threads.swift */; };
 		FAAFE03919F44DF80049E72F /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03719F44DF80049E72F /* Threads.swift */; };
 		FAAFE03C19F44E370049E72F /* ThreadsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03A19F44E370049E72F /* ThreadsTest.swift */; };
+		FAAFE04319F454EF0049E72F /* NSURLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE04219F454EF0049E72F /* NSURLExtensions.swift */; };
+		FAAFE04419F454EF0049E72F /* NSURLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE04219F454EF0049E72F /* NSURLExtensions.swift */; };
+		FAAFE04619F455030049E72F /* NSURLExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE04519F455030049E72F /* NSURLExtensionsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,8 @@
 		FAAFE03519F3EB380049E72F /* URITemplateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URITemplateTests.swift; sourceTree = "<group>"; };
 		FAAFE03719F44DF80049E72F /* Threads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threads.swift; sourceTree = "<group>"; };
 		FAAFE03A19F44E370049E72F /* ThreadsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsTest.swift; sourceTree = "<group>"; };
+		FAAFE04219F454EF0049E72F /* NSURLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLExtensions.swift; sourceTree = "<group>"; };
+		FAAFE04519F455030049E72F /* NSURLExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSURLExtensionsTest.swift; path = RepositoryBrowserTests/NSURLExtensionsTest.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +100,7 @@
 				FAAFE01A19F3E4160049E72F /* LaunchScreen.xib */,
 				FAAFE01519F3E4160049E72F /* Main.storyboard */,
 				FAAFE01119F3E4160049E72F /* MasterViewController.swift */,
+				FAAFE04219F454EF0049E72F /* NSURLExtensions.swift */,
 				FAAFE00D19F3E4160049E72F /* Supporting Files */,
 				FAAFE03719F44DF80049E72F /* Threads.swift */,
 				FAAFE03119F3E7FD0049E72F /* URITemplate.swift */,
@@ -113,6 +119,7 @@
 		FAAFE02419F3E4160049E72F /* RepositoryBrowserTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAAFE04519F455030049E72F /* NSURLExtensionsTest.swift */,
 				FAAFE02719F3E4160049E72F /* RepositoryBrowserTests.swift */,
 				FAAFE02519F3E4160049E72F /* Supporting Files */,
 				FAAFE03A19F44E370049E72F /* ThreadsTest.swift */,
@@ -231,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAFE04319F454EF0049E72F /* NSURLExtensions.swift in Sources */,
 				FAAFE03319F3E8070049E72F /* URITemplate.swift in Sources */,
 				FAAFE01419F3E4160049E72F /* DetailViewController.swift in Sources */,
 				FAAFE03819F44DF80049E72F /* Threads.swift in Sources */,
@@ -243,9 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAFE04419F454EF0049E72F /* NSURLExtensions.swift in Sources */,
 				FAAFE03619F3EB380049E72F /* URITemplateTests.swift in Sources */,
 				FAAFE03419F3E8080049E72F /* URITemplate.swift in Sources */,
 				FAAFE02819F3E4160049E72F /* RepositoryBrowserTests.swift in Sources */,
+				FAAFE04619F455030049E72F /* NSURLExtensionsTest.swift in Sources */,
 				FAAFE03919F44DF80049E72F /* Threads.swift in Sources */,
 				FAAFE03C19F44E370049E72F /* ThreadsTest.swift in Sources */,
 			);
