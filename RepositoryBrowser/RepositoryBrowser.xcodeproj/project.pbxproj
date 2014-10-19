@@ -17,6 +17,9 @@
 		FAAFE03319F3E8070049E72F /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03119F3E7FD0049E72F /* URITemplate.swift */; };
 		FAAFE03419F3E8080049E72F /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03119F3E7FD0049E72F /* URITemplate.swift */; };
 		FAAFE03619F3EB380049E72F /* URITemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03519F3EB380049E72F /* URITemplateTests.swift */; };
+		FAAFE03819F44DF80049E72F /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03719F44DF80049E72F /* Threads.swift */; };
+		FAAFE03919F44DF80049E72F /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03719F44DF80049E72F /* Threads.swift */; };
+		FAAFE03C19F44E370049E72F /* ThreadsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03A19F44E370049E72F /* ThreadsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,8 @@
 		FAAFE02719F3E4160049E72F /* RepositoryBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryBrowserTests.swift; sourceTree = "<group>"; };
 		FAAFE03119F3E7FD0049E72F /* URITemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URITemplate.swift; sourceTree = "<group>"; };
 		FAAFE03519F3EB380049E72F /* URITemplateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URITemplateTests.swift; sourceTree = "<group>"; };
+		FAAFE03719F44DF80049E72F /* Threads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threads.swift; sourceTree = "<group>"; };
+		FAAFE03A19F44E370049E72F /* ThreadsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +96,7 @@
 				FAAFE01519F3E4160049E72F /* Main.storyboard */,
 				FAAFE01119F3E4160049E72F /* MasterViewController.swift */,
 				FAAFE00D19F3E4160049E72F /* Supporting Files */,
+				FAAFE03719F44DF80049E72F /* Threads.swift */,
 				FAAFE03119F3E7FD0049E72F /* URITemplate.swift */,
 			);
 			path = RepositoryBrowser;
@@ -109,6 +115,7 @@
 			children = (
 				FAAFE02719F3E4160049E72F /* RepositoryBrowserTests.swift */,
 				FAAFE02519F3E4160049E72F /* Supporting Files */,
+				FAAFE03A19F44E370049E72F /* ThreadsTest.swift */,
 				FAAFE03519F3EB380049E72F /* URITemplateTests.swift */,
 			);
 			path = RepositoryBrowserTests;
@@ -226,6 +233,7 @@
 			files = (
 				FAAFE03319F3E8070049E72F /* URITemplate.swift in Sources */,
 				FAAFE01419F3E4160049E72F /* DetailViewController.swift in Sources */,
+				FAAFE03819F44DF80049E72F /* Threads.swift in Sources */,
 				FAAFE01219F3E4160049E72F /* MasterViewController.swift in Sources */,
 				FAAFE01019F3E4160049E72F /* AppDelegate.swift in Sources */,
 			);
@@ -238,6 +246,8 @@
 				FAAFE03619F3EB380049E72F /* URITemplateTests.swift in Sources */,
 				FAAFE03419F3E8080049E72F /* URITemplate.swift in Sources */,
 				FAAFE02819F3E4160049E72F /* RepositoryBrowserTests.swift in Sources */,
+				FAAFE03919F44DF80049E72F /* Threads.swift in Sources */,
+				FAAFE03C19F44E370049E72F /* ThreadsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
