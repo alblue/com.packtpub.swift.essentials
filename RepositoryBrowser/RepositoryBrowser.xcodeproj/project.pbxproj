@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3147B319F46DEB00699223 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B219F46DEB00699223 /* GitHubAPI.swift */; };
+		FA3147B419F46DEB00699223 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B219F46DEB00699223 /* GitHubAPI.swift */; };
+		FA3147B719F46E1D00699223 /* GitHubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B519F46E1D00699223 /* GitHubAPITests.swift */; };
+		FA3147BA19F4705100699223 /* api in Resources */ = {isa = PBXBuildFile; fileRef = FA3147B819F4705100699223 /* api */; };
 		FAAFE01019F3E4160049E72F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE00F19F3E4160049E72F /* AppDelegate.swift */; };
 		FAAFE01219F3E4160049E72F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE01119F3E4160049E72F /* MasterViewController.swift */; };
 		FAAFE01419F3E4160049E72F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE01319F3E4160049E72F /* DetailViewController.swift */; };
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA3147B219F46DEB00699223 /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		FA3147B519F46E1D00699223 /* GitHubAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPITests.swift; sourceTree = "<group>"; };
+		FA3147B819F4705100699223 /* api */ = {isa = PBXFileReference; lastKnownFileType = folder; path = api; sourceTree = "<group>"; };
 		FAAFE00A19F3E4160049E72F /* RepositoryBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositoryBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAFE00E19F3E4160049E72F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAFE00F19F3E4160049E72F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 		FAAFE00119F3E4150049E72F = {
 			isa = PBXGroup;
 			children = (
+				FA3147B819F4705100699223 /* api */,
 				FAAFE00C19F3E4160049E72F /* RepositoryBrowser */,
 				FAAFE02419F3E4160049E72F /* RepositoryBrowserTests */,
 				FAAFE00B19F3E4160049E72F /* Products */,
@@ -96,6 +104,7 @@
 			children = (
 				FAAFE00F19F3E4160049E72F /* AppDelegate.swift */,
 				FAAFE01319F3E4160049E72F /* DetailViewController.swift */,
+				FA3147B219F46DEB00699223 /* GitHubAPI.swift */,
 				FAAFE01819F3E4160049E72F /* Images.xcassets */,
 				FAAFE01A19F3E4160049E72F /* LaunchScreen.xib */,
 				FAAFE01519F3E4160049E72F /* Main.storyboard */,
@@ -119,6 +128,7 @@
 		FAAFE02419F3E4160049E72F /* RepositoryBrowserTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA3147B519F46E1D00699223 /* GitHubAPITests.swift */,
 				FAAFE04519F455030049E72F /* NSURLExtensionsTest.swift */,
 				FAAFE02719F3E4160049E72F /* RepositoryBrowserTests.swift */,
 				FAAFE02519F3E4160049E72F /* Supporting Files */,
@@ -226,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3147BA19F4705100699223 /* api in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +252,7 @@
 				FAAFE01419F3E4160049E72F /* DetailViewController.swift in Sources */,
 				FAAFE03819F44DF80049E72F /* Threads.swift in Sources */,
 				FAAFE01219F3E4160049E72F /* MasterViewController.swift in Sources */,
+				FA3147B319F46DEB00699223 /* GitHubAPI.swift in Sources */,
 				FAAFE01019F3E4160049E72F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +267,9 @@
 				FAAFE02819F3E4160049E72F /* RepositoryBrowserTests.swift in Sources */,
 				FAAFE04619F455030049E72F /* NSURLExtensionsTest.swift in Sources */,
 				FAAFE03919F44DF80049E72F /* Threads.swift in Sources */,
+				FA3147B719F46E1D00699223 /* GitHubAPITests.swift in Sources */,
 				FAAFE03C19F44E370049E72F /* ThreadsTest.swift in Sources */,
+				FA3147B419F46DEB00699223 /* GitHubAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +455,7 @@
 				FAAFE02D19F3E4160049E72F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAAFE02E19F3E4160049E72F /* Build configuration list for PBXNativeTarget "RepositoryBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +464,7 @@
 				FAAFE03019F3E4160049E72F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
