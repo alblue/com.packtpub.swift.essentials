@@ -24,8 +24,7 @@ import UIKit
 class MasterViewController: UITableViewController {
 
 	var detailViewController: DetailViewController? = nil
-	var objects = NSMutableArray()
-
+	var app:AppDelegate!
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -44,6 +43,7 @@ class MasterViewController: UITableViewController {
 		    let controllers = split.viewControllers
 		    self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
 		}
+		app = UIApplication.sharedApplication().delegate as? AppDelegate
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -52,9 +52,6 @@ class MasterViewController: UITableViewController {
 	}
 
 	func insertNewObject(sender: AnyObject) {
-		objects.insertObject(NSDate(), atIndex: 0)
-		let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-		self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
 	}
 
 	// MARK: - Segues
@@ -62,11 +59,12 @@ class MasterViewController: UITableViewController {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showDetail" {
 		    if let indexPath = self.tableView.indexPathForSelectedRow() {
-		        let object = objects[indexPath.row] as NSDate
+				/*
+				let object = objects[indexPath.row] as NSDate
 		        let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
 		        controller.detailItem = object
 		        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-		        controller.navigationItem.leftItemsSupplementBackButton = true
+		        controller.navigationItem.leftItemsSupplementBackButton = true*/
 		    }
 		}
 	}
@@ -74,35 +72,47 @@ class MasterViewController: UITableViewController {
 	// MARK: - Table View
 
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 1
+		return app.users.count
+	}
+	
+	override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		return app.users[section]
 	}
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return objects.count
+		let user = app.users[section]
+		if let repos = app.repos[user] {
+			return repos.count
+		} else {
+			app.loadRepoNamesFor(user) {
+				Threads.runOnUIThread {
+					tableView.reloadSections(NSIndexSet(index: section), withRowAnimation:  .Automatic)
+				}
+			}
+			return 0
+		}
 	}
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-
-		let object = objects[indexPath.row] as NSDate
-		cell.textLabel.text = object.description
+		let user = app.users[indexPath.section]
+		let repo = app.repos[user]![indexPath.row]
+		cell.textLabel.text = repo
 		return cell
 	}
 
 	override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
 		// Return false if you do not want the specified item to be editable.
-		return true
+		return false
 	}
 
 	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 		if editingStyle == .Delete {
-		    objects.removeObjectAtIndex(indexPath.row)
-		    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+		    //objects.removeObjectAtIndex(indexPath.row)
+		    //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
 		} else if editingStyle == .Insert {
 		    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
 		}
 	}
-
-
 }
 

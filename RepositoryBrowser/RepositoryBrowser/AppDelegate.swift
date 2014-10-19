@@ -25,7 +25,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
 	var window: UIWindow?
-
+	var api:GitHubAPI!
+	var users:[String] = []
+	var repos:[String:[String]] = [:]
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
@@ -33,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as UINavigationController
 		navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
 		splitViewController.delegate = self
+		api = GitHubAPI.connect("https://raw.githubusercontent.com/alblue/com.packtpub.swift.essentials/master/RepositoryBrowser/api/index.json")
+		users = ["alblue"]
 		return true
 	}
 
@@ -71,6 +75,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 	    }
 	    return false
 	}
-
+	func loadRepoNamesFor(user:String, fn:()->()) {
+		repos[user] = []
+		api.withUserRepos(user) {
+			results in
+			self.repos[user] = results.map {
+				(r:[String:String]) -> String
+				in r["name"]!
+			}
+			fn()
+		}
+	}
 }
 
