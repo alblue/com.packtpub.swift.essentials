@@ -46,4 +46,16 @@ extension NSURL {
 			}
 		}.resume()
 	}
+	func withJSONArrayOfDictionary(fn:[[String:String]] -> ()) {
+		let session = NSURLSession.sharedSession()
+		session.dataTaskWithURL(self) {
+			data,response,error -> () in
+			if let json = try? NSJSONSerialization.JSONObjectWithData(
+				data!, options: .AllowFragments) as? [[String:AnyObject]] {
+				fn(json!.map(toStringString))
+			} else {
+				fn([[String:String]]())
+			}
+		}.resume()
+	}
 }
