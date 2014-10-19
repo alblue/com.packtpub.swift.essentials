@@ -62,4 +62,17 @@ class GitHubAPI {
 			return url
 		}
 	}
+	func withUserRepos(user:String, fn:([[String:String]]) -> ()) {
+		let key = "repos:\(user)"
+		if let repos = cache.objectForKey(key) as? [[String:String]] {
+			fn(repos)
+		} else {
+			let url = getURLForUserRepos(user)
+			url.withJSONArrayOfDictionary {
+				repos in
+				self.cache.setObject(repos,forKey:key)
+				fn(repos)
+			}
+		}
+	}
 }
