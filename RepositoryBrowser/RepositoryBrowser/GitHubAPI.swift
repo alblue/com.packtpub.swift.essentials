@@ -50,4 +50,29 @@ class GitHubAPI {
 		self.base = base
 		self.services = services
 	}
+	func getURLForUserRepos(user:String) -> NSURL {
+		let key = "r:\(user)"
+		if let url = cache.objectForKey(key) as? NSURL {
+			return url
+		} else {
+			let userRepositoriesURL = services["user_repositories_url"]!
+			let userRepositoryURL = URITemplate.replace(userRepositoriesURL, values:["user":user])
+			let url = NSURL(string:userRepositoryURL, relativeToURL:base)!
+			cache.setObject(url,forKey:key)
+			return url
+		}
+	}
+	func withUserRepos(user:String, fn:([[String:String]]) -> ()) {
+		let key = "repos:\(user)"
+		if let repos = cache.objectForKey(key) as? [[String:String]] {
+			fn(repos)
+		} else {
+			let url = getURLForUserRepos(user)
+			url.withJSONArrayOfDictionary {
+				repos in
+				self.cache.setObject(repos,forKey:key)
+				fn(repos)
+			}
+		}
+	}
 }

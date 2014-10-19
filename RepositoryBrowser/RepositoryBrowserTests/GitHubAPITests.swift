@@ -27,6 +27,15 @@ class GitHubAPITests: XCTestCase{
 		if let url = bundle.URLForResource("api/index", withExtension:"json") {
 			if let api = GitHubAPI.connect(url) {
 				XCTAssertTrue(true,"Created API")
+				let userRepo = api.getURLForUserRepos("alblue")
+				userRepo.withJSONArrayOfDictionary {
+					array in
+					XCTAssertEqual(22,array.count,"Number of repos")
+				}
+				api.withUserRepos("alblue") {
+					array in
+					XCTAssertEqual(22,array.count,"Number of repos")
+				}
 			} else {
 				XCTAssertFalse(true,"Failed to parse \(url)")
 			}
