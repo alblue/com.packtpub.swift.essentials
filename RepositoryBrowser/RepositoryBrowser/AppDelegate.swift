@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
 		splitViewController.delegate = self
 		api = GitHubAPI.connect("https://raw.githubusercontent.com/alblue/com.packtpub.swift.essentials/master/RepositoryBrowser/api/index.json")
-		users = ["alblue"]
+		users = [] // or load from NSUserDefaults.standardUserDefaults
 		return true
 	}
 
@@ -85,6 +85,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 			}
 			fn()
 		}
+	}
+	func addUser(user:String) {
+		users += [user]
+		users.sort({ $0 < $1 })
+		// add users to NSUserDefaults.standardUserDefaults
 	}
 }
 

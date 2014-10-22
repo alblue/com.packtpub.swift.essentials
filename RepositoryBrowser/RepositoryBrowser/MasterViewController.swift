@@ -52,12 +52,11 @@ class MasterViewController: UITableViewController {
 	}
 
 	func insertNewObject(sender: AnyObject) {
-		/*
-		users.insertObject(NSDate.date(), atIndex: 0)
-		let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-		self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)*/
+		let alert = UIAlertView(title: "Add user", message: "Please select a user to add", delegate: AddAlertDelegate(app,tableView), cancelButtonTitle: "Cancel", otherButtonTitles: "Add")
+		alert.alertViewStyle = .PlainTextInput
+		alert.textFieldAtIndex(0)?.placeholder = "Username"
+		alert.show()
 	}
-
 	// MARK: - Segues
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -120,3 +119,25 @@ class MasterViewController: UITableViewController {
 	}
 }
 
+class AddAlertDelegate: NSObject, UIAlertViewDelegate {
+	var capture:AddAlertDelegate?
+	var tableView:UITableView
+	var app:AppDelegate
+	init(_ app:AppDelegate,_ tableView:UITableView) {
+		self.app = app
+		self.tableView = tableView
+		super.init()
+		capture = self // prevent immediate GC
+	}
+	func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+		if buttonIndex == 1 {
+			if let user = alertView.textFieldAtIndex(0)?.text {
+				app.addUser(user)
+				Threads.runOnUIThread {
+					self.tableView.reloadData()
+				}
+			}
+		}
+		capture = nil
+	}
+}
