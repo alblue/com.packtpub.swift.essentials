@@ -62,13 +62,22 @@ class MasterViewController: UITableViewController {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showDetail" {
 		    if let indexPath = self.tableView.indexPathForSelectedRow() {
-				/*
-				let object = objects[indexPath.row] as NSDate
-		        let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
-		        controller.detailItem = object
-		        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-		        controller.navigationItem.leftItemsSupplementBackButton = true*/
-		    }
+				// get the details controller
+				let controller = (segue.destinationViewController as
+					UINavigationController).topViewController
+					as DetailViewController
+				let user = app.users[indexPath.section]
+				let repo = app.repos[user]![indexPath.row]
+				controller.repo = repo
+				controller.user = user
+				app.api.withUserRepos(user) {
+					repos -> () in
+					controller.data = repos.filter({$0["name"] == repo}).first
+				}
+				controller.navigationItem.leftBarButtonItem =
+					self.splitViewController?.displayModeButtonItem()
+				controller.navigationItem.leftItemsSupplementBackButton = true
+			}
 		}
 	}
 
