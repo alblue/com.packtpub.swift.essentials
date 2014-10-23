@@ -23,36 +23,39 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-	@IBOutlet weak var detailDescriptionLabel: UILabel!
+	@IBOutlet weak var userLabel: UILabel?
+	@IBOutlet weak var repoLabel: UILabel?
+	@IBOutlet weak var issuesLabel: UILabel?
+	@IBOutlet weak var watchersLabel: UILabel?
 
-
-	var detailItem: AnyObject? {
+	var user: String? {
 		didSet {
-		    // Update the view.
-		    self.configureView()
+			configureView()
 		}
 	}
-
-	func configureView() {
-		// Update the user interface for the detail item.
-		if let detail: AnyObject = self.detailItem {
-		    if let label = self.detailDescriptionLabel {
-		        label.text = detail.description
-		    }
+	var repo: String? {
+		didSet {
+			configureView()
 		}
 	}
-
+	var data:[String:String]? {
+		didSet {
+			configureView()
+		}
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-		self.configureView()
+		configureView()
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	func configureView() {
+		if let label = userLabel { label.text = user }
+		if let label = repoLabel { label.text = repo }
+		if let label = issuesLabel {
+			label.text = self.data?["open_issues_count"]
+		}
+		if let label = watchersLabel {
+			label.text = self.data?["watchers_count"]
+		}
 	}
-
-
 }
 

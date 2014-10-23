@@ -76,19 +76,26 @@ class MasterViewController: UITableViewController {
 	}
 
 	// MARK: - Segues
-/*
+
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "showDetail" {
 		    if let indexPath = self.tableView.indexPathForSelectedRow {
-		        let object = objects[indexPath.row] as! NSDate
-		        let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-		        controller.detailItem = object
+				// get the details controller
+				let controller = (segue.destinationViewController as!
+					UINavigationController).topViewController
+					as! DetailViewController
+				// set the details
+				let user = app.users[indexPath.section]
+				let repo = app.repos[user]![indexPath.row]
+				controller.repo = repo["name"] ?? ""
+				controller.user = user
+				controller.data = repo
 		        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
 		        controller.navigationItem.leftItemsSupplementBackButton = true
 		    }
 		}
 	}
-*/
+
 	// MARK: - Table View
 
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
