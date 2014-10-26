@@ -33,10 +33,10 @@ class SampleTable: UITableViewController {
 		let xib = UINib(nibName:"CounterView",bundle:nil)
 		let objects = xib.instantiateWithOwner(self, options:nil)
 		let counter = objects.first as? UIView
-		super.tableView.tableHeaderView = counter
+		tableView.tableHeaderView = counter
 		let footer = UITableViewHeaderFooterView()
 		footer.contentView.addSubview(TwoLabels(frame:CGRect.zeroRect))
-		super.tableView.tableFooterView = footer
+		tableView.tableFooterView = footer
 		let url = NSURL(string: "https://raw.githubusercontent.com/alblue/com.packtpub.swift.essentials/master/CustomViews/CustomViews/SampleTable.json")!
 		let session = NSURLSession.sharedSession()
 		let task = session.dataTaskWithURL(url, completionHandler: {data,response,error -> Void in
