@@ -86,9 +86,25 @@ class MasterViewController: UITableViewController {
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return app.users.count
 	}
-	
-	override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		return app.users[section]
+
+	override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		let cell = UITableViewHeaderFooterView()
+		let user = app.users[section]
+		cell.textLabel.text = user
+		app.api.withUserImage(user) {
+			image in
+			let minSize = min(cell.frame.height, cell.frame.width)
+			let squareSize = CGSize(width:minSize, height:minSize)
+			let imageFrame = CGRect(origin:cell.frame.origin, size:squareSize)
+			Threads.runOnUIThread {
+				let imageView = UIImageView(image:image)
+				imageView.frame = imageFrame
+				cell.addSubview(imageView)
+				cell.setNeedsLayout()
+				cell.setNeedsDisplay()
+			}
+		}
+		return cell
 	}
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
