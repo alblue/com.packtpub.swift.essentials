@@ -20,6 +20,7 @@
 // THE SOFTWARE.
 
 import Foundation
+import UIKit
 
 class GitHubAPI {
 	let base:NSURL
@@ -72,6 +73,39 @@ class GitHubAPI {
 				repos in
 				self.cache.setObject(repos,forKey:key)
 				fn(repos)
+			}
+		}
+	}
+	func getURLForUserInfo(user:String) -> NSURL {
+		let key = "ui:\(user)"
+		if let url = cache.objectForKey(key) as? NSURL {
+			return url
+		} else {
+			let userURL = services["user_url"]!
+			let userSpecificURL = URITemplate.replace(userURL, values:["user":user])
+			let url = NSURL(string:userSpecificURL, relativeToURL:base)!
+			cache.setObject(url,forKey:key)
+			return url
+		}
+	}
+	func withUserImage(user:String, fn:(UIImage -> ())) {
+		let key = "image:\(user)"
+		if let image = cache.objectForKey(key) as? UIImage {
+			fn(image)
+		} else {
+			let url = getURLForUserInfo(user)
+			url.withJSONDictionary {
+				userInfo in
+				if let avatar_url = userInfo["avatar_url"] {
+					if let avatarURL = NSURL(string:avatar_url, relativeToURL:url) {
+						if let data = NSData(contentsOfURL:avatarURL) {
+							if let image = UIImage(data: data) {
+								self.cache.setObject(image,forKey:key)
+								fn(image)
+							}
+						}
+					}
+				}
 			}
 		}
 	}
