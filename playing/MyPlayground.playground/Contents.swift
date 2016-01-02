@@ -17,3 +17,8 @@ label.text = str
 label.textColor = blue;
 label.font = UIFont.systemFontOfSize(24)
 let alblue = UIImage(named:"alblue")
+
+import XCPlayground
+
+let page = XCPlaygroundPage.currentPage
+page.captureValue(alblue, withIdentifier:"Al Blue")
