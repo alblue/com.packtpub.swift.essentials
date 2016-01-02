@@ -35,3 +35,18 @@ dispatch_async(dispatch_get_main_queue()) {
 	}
 }
 page.needsIndefiniteExecution = true
+
+/**
+Returns the string in SHOUTY CAPS
+- parameter input: the input string
+- author: Alex Blewitt
+- returns: The input string, but in upper case
+- throws: No errors thrown
+- note: Please don't shout
+- seealso: String.uppercaseString
+- since: 2016
+ */
+func shout(input:String) -> String {
+	return input.uppercaseString
+}
+shout(str)
