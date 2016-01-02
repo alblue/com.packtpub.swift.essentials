@@ -16,3 +16,4 @@ let label = UILabel(frame:size)
 label.text = str
 label.textColor = blue;
 label.font = UIFont.systemFontOfSize(24)
+let alblue = UIImage(named:"alblue")
