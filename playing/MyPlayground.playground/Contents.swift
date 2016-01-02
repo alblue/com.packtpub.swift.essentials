@@ -22,3 +22,13 @@ import XCPlayground
 
 let page = XCPlaygroundPage.currentPage
 page.captureValue(alblue, withIdentifier:"Al Blue")
+
+for n in 1...6 {
+	if n % 2 == 0 {
+		page.captureValue(n,withIdentifier:"even")
+		page.captureValue(0,withIdentifier:"odd")
+	} else {
+		page.captureValue(n,withIdentifier:"odd")
+		page.captureValue(0,withIdentifier:"even")
+	}
+}
