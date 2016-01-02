@@ -93,6 +93,11 @@
                                     <constraint firstAttribute="width" constant="50" id="fcM-mV-6Mu"/>
                                     <constraint firstAttribute="height" constant="50" id="p6j-mz-YwG"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressAmount">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
