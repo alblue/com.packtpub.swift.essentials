@@ -41,19 +41,14 @@ class SampleTable: UITableViewController {
 		let session = NSURLSession.sharedSession()
 		let encoding = NSUTF8StringEncoding
 		let task = session.dataTaskWithURL(url, completionHandler: {data,response,error -> Void in
-			if error == nil {
-				let httpResponse = response as! NSHTTPURLResponse
-				let statusCode = httpResponse.statusCode
-				if statusCode >= 400 && statusCode < 500 {
-					self.items += [("Client error \(statusCode)",url.absoluteString)]
-				} else if statusCode >= 500 {
-					self.items += [("Server error \(statusCode)",url.absoluteString)]
-				} else {
-					let contents = String(data: data!, encoding:encoding)!
-					self.items += [(url.absoluteString,contents)]
-				}
-			} else {
+			switch (data,response,error) {
+			case (_,_,let e) where e != nil:
 				self.items += [("Error",error!.localizedDescription)]
+			case (_,let r as NSHTTPURLResponse,_) where r.statusCode >= 400 && r.statusCode < 600:
+				self.items += [("Error \(r.statusCode)",url.absoluteString)]
+			default:
+				let contents = String(data: data!, encoding:encoding)!
+				self.items += [(url.absoluteString,contents)]
 			}
 			self.tableView.reloadData()
 		})
