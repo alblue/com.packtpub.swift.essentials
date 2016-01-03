@@ -39,7 +39,6 @@ class SampleTable: UITableViewController {
 		tableView.tableFooterView = footer
 		let url = NSURL(string: "https://raw.githubusercontent.com/alblue/com.packtpub.swift.essentials/master/CustomViews/CustomViews/SampleTable.json")!
 		let session = NSURLSession.sharedSession()
-		let encoding = NSUTF8StringEncoding
 		let task = session.dataTaskWithURL(url, completionHandler: {data,response,error -> Void in
 			guard error == nil else {
 				self.items += [("Error",error!.localizedDescription)]
@@ -56,8 +55,10 @@ class SampleTable: UITableViewController {
 					url.absoluteString)]
 				return
 			}
-			let contents = String(data:data!,encoding:encoding)!
-			self.items += [(url.absoluteString,contents)]
+			let parsed = try? NSJSONSerialization.JSONObjectWithData(data!, options:.AllowFragments) as! NSArray
+			for entry in parsed! {
+				self.items += [(entry["title"] as! String, entry["content"] as! String)]
+			}
 			self.runOnUIThread {
 				self.tableView.backgroundColor = UIColor.redColor()
 				self.tableView.reloadData()
