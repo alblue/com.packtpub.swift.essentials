@@ -53,6 +53,26 @@ class MasterViewController: UITableViewController {
 	}
 
 	func insertNewObject(sender: AnyObject) {
+		let alert = UIAlertController(
+			title: "Add user",
+			message: "Please select a user to add",
+			preferredStyle: .Alert)
+		alert.addAction(UIAlertAction(
+			title: "Cancel", style: .Cancel, handler: nil))
+		alert.addAction(UIAlertAction(
+			title: "Add", style: .Default) {
+				alertAction in
+				let username = alert.textFields![0].text
+				self.app.addUser(username!)
+				Threads.runOnUIThread {
+					self.tableView.reloadData()
+				}
+			})
+		alert.addTextFieldWithConfigurationHandler {
+			textField -> Void in
+			textField.placeholder = "Username";
+		}
+		presentViewController(alert, animated: true, completion: nil)
 	}
 
 	// MARK: - Segues
