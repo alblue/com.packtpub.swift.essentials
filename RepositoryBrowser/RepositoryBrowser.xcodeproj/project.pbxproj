@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0A21351C3B237F0031E1FB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0A21331C3B237F0031E1FB /* Interface.storyboard */; };
+		FA0A21371C3B237F0031E1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0A21361C3B237F0031E1FB /* Assets.xcassets */; };
+		FA0A213E1C3B237F0031E1FB /* RepositoryBrowserWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA0A213D1C3B237F0031E1FB /* RepositoryBrowserWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA0A21431C3B237F0031E1FB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A21421C3B237F0031E1FB /* InterfaceController.swift */; };
+		FA0A21451C3B237F0031E1FB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A21441C3B237F0031E1FB /* ExtensionDelegate.swift */; };
+		FA0A21471C3B237F0031E1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0A21461C3B237F0031E1FB /* Assets.xcassets */; };
+		FA0A214B1C3B237F0031E1FB /* RepositoryBrowserWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA0A21311C3B237F0031E1FB /* RepositoryBrowserWatch.app */; };
 		FA3147B319F46DEB00699223 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B219F46DEB00699223 /* GitHubAPI.swift */; };
 		FA3147B419F46DEB00699223 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B219F46DEB00699223 /* GitHubAPI.swift */; };
 		FA3147B719F46E1D00699223 /* GitHubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B519F46E1D00699223 /* GitHubAPITests.swift */; };
@@ -30,6 +37,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA0A213F1C3B237F0031E1FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAFE00219F3E4150049E72F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA0A213C1C3B237F0031E1FB;
+			remoteInfo = "RepositoryBrowserWatch Extension";
+		};
+		FA0A21491C3B237F0031E1FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAFE00219F3E4150049E72F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA0A21301C3B237F0031E1FB;
+			remoteInfo = RepositoryBrowserWatch;
+		};
 		FAAFE02219F3E4160049E72F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAAFE00219F3E4150049E72F /* Project object */;
@@ -39,7 +60,41 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FA0A21511C3B237F0031E1FB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FA0A213E1C3B237F0031E1FB /* RepositoryBrowserWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA0A21531C3B237F0031E1FB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FA0A214B1C3B237F0031E1FB /* RepositoryBrowserWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FA0A21311C3B237F0031E1FB /* RepositoryBrowserWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositoryBrowserWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0A21341C3B237F0031E1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FA0A21361C3B237F0031E1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA0A21381C3B237F0031E1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0A213D1C3B237F0031E1FB /* RepositoryBrowserWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RepositoryBrowserWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0A21421C3B237F0031E1FB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		FA0A21441C3B237F0031E1FB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		FA0A21461C3B237F0031E1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA0A21481C3B237F0031E1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3147B219F46DEB00699223 /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		FA3147B519F46E1D00699223 /* GitHubAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPITests.swift; sourceTree = "<group>"; };
 		FA3147B819F4705100699223 /* api */ = {isa = PBXFileReference; lastKnownFileType = folder; path = api; sourceTree = "<group>"; };
@@ -63,6 +118,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA0A213A1C3B237F0031E1FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAAFE00719F3E4150049E72F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,12 +142,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0A21321C3B237F0031E1FB /* RepositoryBrowserWatch */ = {
+			isa = PBXGroup;
+			children = (
+				FA0A21331C3B237F0031E1FB /* Interface.storyboard */,
+				FA0A21361C3B237F0031E1FB /* Assets.xcassets */,
+				FA0A21381C3B237F0031E1FB /* Info.plist */,
+			);
+			path = RepositoryBrowserWatch;
+			sourceTree = "<group>";
+		};
+		FA0A21411C3B237F0031E1FB /* RepositoryBrowserWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA0A21421C3B237F0031E1FB /* InterfaceController.swift */,
+				FA0A21441C3B237F0031E1FB /* ExtensionDelegate.swift */,
+				FA0A21461C3B237F0031E1FB /* Assets.xcassets */,
+				FA0A21481C3B237F0031E1FB /* Info.plist */,
+			);
+			path = "RepositoryBrowserWatch Extension";
+			sourceTree = "<group>";
+		};
 		FAAFE00119F3E4150049E72F = {
 			isa = PBXGroup;
 			children = (
 				FA3147B819F4705100699223 /* api */,
 				FAAFE00C19F3E4160049E72F /* RepositoryBrowser */,
 				FAAFE02419F3E4160049E72F /* RepositoryBrowserTests */,
+				FA0A21321C3B237F0031E1FB /* RepositoryBrowserWatch */,
+				FA0A21411C3B237F0031E1FB /* RepositoryBrowserWatch Extension */,
 				FAAFE00B19F3E4160049E72F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +180,8 @@
 			children = (
 				FAAFE00A19F3E4160049E72F /* RepositoryBrowser.app */,
 				FAAFE02119F3E4160049E72F /* RepositoryBrowserTests.xctest */,
+				FA0A21311C3B237F0031E1FB /* RepositoryBrowserWatch.app */,
+				FA0A213D1C3B237F0031E1FB /* RepositoryBrowserWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +236,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA0A21301C3B237F0031E1FB /* RepositoryBrowserWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA0A21521C3B237F0031E1FB /* Build configuration list for PBXNativeTarget "RepositoryBrowserWatch" */;
+			buildPhases = (
+				FA0A212F1C3B237F0031E1FB /* Resources */,
+				FA0A21511C3B237F0031E1FB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA0A21401C3B237F0031E1FB /* PBXTargetDependency */,
+			);
+			name = RepositoryBrowserWatch;
+			productName = RepositoryBrowserWatch;
+			productReference = FA0A21311C3B237F0031E1FB /* RepositoryBrowserWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FA0A213C1C3B237F0031E1FB /* RepositoryBrowserWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA0A21501C3B237F0031E1FB /* Build configuration list for PBXNativeTarget "RepositoryBrowserWatch Extension" */;
+			buildPhases = (
+				FA0A21391C3B237F0031E1FB /* Sources */,
+				FA0A213A1C3B237F0031E1FB /* Frameworks */,
+				FA0A213B1C3B237F0031E1FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RepositoryBrowserWatch Extension";
+			productName = "RepositoryBrowserWatch Extension";
+			productReference = FA0A213D1C3B237F0031E1FB /* RepositoryBrowserWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		FAAFE00919F3E4150049E72F /* RepositoryBrowser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAAFE02B19F3E4160049E72F /* Build configuration list for PBXNativeTarget "RepositoryBrowser" */;
@@ -156,10 +277,12 @@
 				FAAFE00619F3E4150049E72F /* Sources */,
 				FAAFE00719F3E4150049E72F /* Frameworks */,
 				FAAFE00819F3E4150049E72F /* Resources */,
+				FA0A21531C3B237F0031E1FB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FA0A214A1C3B237F0031E1FB /* PBXTargetDependency */,
 			);
 			name = RepositoryBrowser;
 			productName = RepositoryBrowser;
@@ -195,6 +318,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Alex Blewitt";
 				TargetAttributes = {
+					FA0A21301C3B237F0031E1FB = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					FA0A213C1C3B237F0031E1FB = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					FAAFE00919F3E4150049E72F = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
@@ -219,11 +348,30 @@
 			targets = (
 				FAAFE00919F3E4150049E72F /* RepositoryBrowser */,
 				FAAFE02019F3E4160049E72F /* RepositoryBrowserTests */,
+				FA0A21301C3B237F0031E1FB /* RepositoryBrowserWatch */,
+				FA0A213C1C3B237F0031E1FB /* RepositoryBrowserWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA0A212F1C3B237F0031E1FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0A21371C3B237F0031E1FB /* Assets.xcassets in Resources */,
+				FA0A21351C3B237F0031E1FB /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA0A213B1C3B237F0031E1FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0A21471C3B237F0031E1FB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAAFE00819F3E4150049E72F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +393,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA0A21391C3B237F0031E1FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0A21451C3B237F0031E1FB /* ExtensionDelegate.swift in Sources */,
+				FA0A21431C3B237F0031E1FB /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAAFE00619F3E4150049E72F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +435,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FA0A21401C3B237F0031E1FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA0A213C1C3B237F0031E1FB /* RepositoryBrowserWatch Extension */;
+			targetProxy = FA0A213F1C3B237F0031E1FB /* PBXContainerItemProxy */;
+		};
+		FA0A214A1C3B237F0031E1FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA0A21301C3B237F0031E1FB /* RepositoryBrowserWatch */;
+			targetProxy = FA0A21491C3B237F0031E1FB /* PBXContainerItemProxy */;
+		};
 		FAAFE02319F3E4160049E72F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAAFE00919F3E4150049E72F /* RepositoryBrowser */;
@@ -286,6 +453,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA0A21331C3B237F0031E1FB /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA0A21341C3B237F0031E1FB /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		FAAFE01519F3E4160049E72F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -305,6 +480,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA0A214C1C3B237F0031E1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = RepositoryBrowserWatch_Extension;
+				INFOPLIST_FILE = RepositoryBrowserWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.packtpub.swift.essentials.RepositoryBrowser.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		FA0A214D1C3B237F0031E1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = RepositoryBrowserWatch_Extension;
+				INFOPLIST_FILE = RepositoryBrowserWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.packtpub.swift.essentials.RepositoryBrowser.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		FA0A214E1C3B237F0031E1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "RepositoryBrowserWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.packtpub.swift.essentials.RepositoryBrowser.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		FA0A214F1C3B237F0031E1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "RepositoryBrowserWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.packtpub.swift.essentials.RepositoryBrowser.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 		FAAFE02919F3E4160049E72F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -438,6 +683,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA0A21501C3B237F0031E1FB /* Build configuration list for PBXNativeTarget "RepositoryBrowserWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0A214E1C3B237F0031E1FB /* Debug */,
+				FA0A214F1C3B237F0031E1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA0A21521C3B237F0031E1FB /* Build configuration list for PBXNativeTarget "RepositoryBrowserWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0A214C1C3B237F0031E1FB /* Debug */,
+				FA0A214D1C3B237F0031E1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FAAFE00519F3E4150049E72F /* Build configuration list for PBXProject "RepositoryBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
