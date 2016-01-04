@@ -22,6 +22,7 @@
                                     <connections>
                                         <outlet property="icon" destination="qHQ-8Z-Sjn" id="Lkl-RP-XhO"/>
                                         <outlet property="name" destination="jFu-Qr-Rho" id="SzS-Fc-AY2"/>
+                                        <segue destination="Wxq-Mh-eQN" kind="push" id="8bz-0E-0hh"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -32,6 +33,30 @@
                     </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--Repository List Controller-->
+        <scene sceneID="y8P-qm-6MY">
+            <objects>
+                <controller id="Wxq-Mh-eQN" customClass="RepositoryListController" customModule="RepositoryBrowserWatch_Extension">
+                    <items>
+                        <table alignment="left" id="Mfc-c5-j5a">
+                            <items>
+                                <tableRow identifier="repository" id="OYz-vo-cEd">
+                                    <group key="rootItem" width="1" alignment="left" id="Hqo-jq-QBT">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Repository" id="CGm-29-feQ"/>
+                                        </items>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="repositoriesTable" destination="Mfc-c5-j5a" id="NkF-v6-IMa"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="513" y="357"/>
         </scene>
     </scenes>
 </document>
