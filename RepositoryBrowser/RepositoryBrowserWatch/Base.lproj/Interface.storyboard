@@ -15,10 +15,12 @@
                                 <tableRow identifier="user" id="huz-pT-LAw" customClass="UserRowController" customModule="RepositoryBrowserWatch_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="pbO-3d-Ssl">
                                         <items>
-                                            <label width="1" height="1" alignment="left" text="User" id="jFu-Qr-Rho"/>
+                                            <label height="1" alignment="left" text="User" id="jFu-Qr-Rho"/>
+                                            <imageView width="32" height="32" alignment="right" verticalAlignment="center" contentMode="scaleAspectFit" id="qHQ-8Z-Sjn"/>
                                         </items>
                                     </group>
                                     <connections>
+                                        <outlet property="icon" destination="qHQ-8Z-Sjn" id="Lkl-RP-XhO"/>
                                         <outlet property="name" destination="jFu-Qr-Rho" id="SzS-Fc-AY2"/>
                                     </connections>
                                 </tableRow>

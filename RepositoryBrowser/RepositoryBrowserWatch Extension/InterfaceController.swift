@@ -33,6 +33,9 @@ class InterfaceController: WKInterfaceController {
 		for (index,user) in users.enumerate() {
 			let controller = usersTable.rowControllerAtIndex(index) as! UserRowController
 			controller.name.setText(user)
+			delegate.api.withUserImage(user) {
+				image in controller.icon.setImage(image)
+			}
 		}
 	}
 	override func willActivate() {
@@ -47,4 +50,5 @@ class InterfaceController: WKInterfaceController {
 
 class UserRowController: NSObject {
 	@IBOutlet weak var name: WKInterfaceLabel!
+	@IBOutlet weak var icon: WKInterfaceImage!
 }
