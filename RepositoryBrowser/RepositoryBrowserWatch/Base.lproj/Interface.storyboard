@@ -33,6 +33,7 @@
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="121" y="203"/>
         </scene>
         <!--Repository List Controller-->
         <scene sceneID="y8P-qm-6MY">
@@ -41,12 +42,15 @@
                     <items>
                         <table alignment="left" id="Mfc-c5-j5a">
                             <items>
-                                <tableRow identifier="repository" id="OYz-vo-cEd">
+                                <tableRow identifier="repository" id="OYz-vo-cEd" customClass="RepositoryRowController" customModule="RepositoryBrowserWatch_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="Hqo-jq-QBT">
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="Repository" id="CGm-29-feQ"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="name" destination="CGm-29-feQ" id="vx1-kd-0HP"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -56,7 +60,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="513" y="357"/>
+            <point key="canvasLocation" x="287" y="203"/>
         </scene>
     </scenes>
 </document>

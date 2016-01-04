@@ -28,4 +28,19 @@ class RepositoryRowController: NSObject {
 class RepositoryListController: WKInterfaceController {
 	let delegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
 	@IBOutlet weak var repositoriesTable: WKInterfaceTable!
+	override func awakeWithContext(context: AnyObject?) {
+		super.awakeWithContext(context)
+		if let user = context as? String {
+			delegate.loadReposFor(user) {
+				result in
+				self.repositoriesTable.setNumberOfRows(
+					result.count, withRowType: "repository")
+				for (index,repo) in result.enumerate() {
+					let controller = self.repositoriesTable
+						.rowControllerAtIndex(index) as! RepositoryRowController
+					controller.name.setText(repo["name"] ?? "")
+				}
+			}
+		}
+	}
 }

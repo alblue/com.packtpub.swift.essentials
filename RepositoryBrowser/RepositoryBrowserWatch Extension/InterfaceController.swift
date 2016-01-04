@@ -38,6 +38,12 @@ class InterfaceController: WKInterfaceController {
 			}
 		}
 	}
+	override func contextForSegueWithIdentifier(
+		segueIdentifier: String,
+		inTable table: WKInterfaceTable,
+		rowIndex: Int) -> AnyObject? {
+			return delegate.users[rowIndex]
+	}
 	override func willActivate() {
 		// This method is called when watch view controller is about to be visible to user
 		super.willActivate()
