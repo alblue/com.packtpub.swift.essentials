@@ -22,6 +22,21 @@
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+	var api:GitHubAPI!
+	var users:[String] = []
+	var repos:[String:[[String:String]]] = [:]
+	func loadReposFor(user:String, fn:([[String:String]])->()) {
+		repos[user] = []
+		api.withUserRepos(user) {
+			results in
+			self.repos[user] = results
+			fn(results)
+		}
+	}
+	func addUser(user:String) {
+		users += [user]
+		users.sortInPlace({ $0 < $1 })
+	}
 	func applicationDidFinishLaunching() {
 		// Perform any final initialization of your application.
 	}
