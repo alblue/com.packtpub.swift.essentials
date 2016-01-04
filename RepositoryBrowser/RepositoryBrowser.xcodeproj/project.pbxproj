@@ -18,7 +18,8 @@
 		FA0A21591C3B25F30031E1FB /* NSURLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE04219F454EF0049E72F /* NSURLExtensions.swift */; };
 		FA0A215A1C3B25F30031E1FB /* Threads.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03719F44DF80049E72F /* Threads.swift */; };
 		FA0A215B1C3B25F30031E1FB /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAFE03119F3E7FD0049E72F /* URITemplate.swift */; };
-		FA0A21611C3B326B0031E1FB /* RepositoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A21601C3B326B0031E1FB /* RepositoryListController.swift */; };
+		FA0A215F1C3B2F4A0031E1FB /* RepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A215E1C3B2F4A0031E1FB /* RepositoryController.swift */; };
+		FA0A21631C3B32EC0031E1FB /* RepositoryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A21621C3B32EC0031E1FB /* RepositoryListController.swift */; };
 		FA3147B319F46DEB00699223 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B219F46DEB00699223 /* GitHubAPI.swift */; };
 		FA3147B419F46DEB00699223 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B219F46DEB00699223 /* GitHubAPI.swift */; };
 		FA3147B719F46E1D00699223 /* GitHubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3147B519F46E1D00699223 /* GitHubAPITests.swift */; };
@@ -100,7 +101,8 @@
 		FA0A21441C3B237F0031E1FB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		FA0A21461C3B237F0031E1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0A21481C3B237F0031E1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA0A21601C3B326B0031E1FB /* RepositoryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListController.swift; sourceTree = "<group>"; };
+		FA0A215E1C3B2F4A0031E1FB /* RepositoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryController.swift; sourceTree = "<group>"; };
+		FA0A21621C3B32EC0031E1FB /* RepositoryListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListController.swift; sourceTree = "<group>"; };
 		FA3147B219F46DEB00699223 /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		FA3147B519F46E1D00699223 /* GitHubAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPITests.swift; sourceTree = "<group>"; };
 		FA3147B819F4705100699223 /* api */ = {isa = PBXFileReference; lastKnownFileType = folder; path = api; sourceTree = "<group>"; };
@@ -165,7 +167,8 @@
 				FA0A21441C3B237F0031E1FB /* ExtensionDelegate.swift */,
 				FA0A21461C3B237F0031E1FB /* Assets.xcassets */,
 				FA0A21481C3B237F0031E1FB /* Info.plist */,
-				FA0A21601C3B326B0031E1FB /* RepositoryListController.swift */,
+				FA0A21621C3B32EC0031E1FB /* RepositoryListController.swift */,
+				FA0A215E1C3B2F4A0031E1FB /* RepositoryController.swift */,
 			);
 			path = "RepositoryBrowserWatch Extension";
 			sourceTree = "<group>";
@@ -405,12 +408,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0A215B1C3B25F30031E1FB /* URITemplate.swift in Sources */,
+				FA0A21631C3B32EC0031E1FB /* RepositoryListController.swift in Sources */,
+				FA0A215F1C3B2F4A0031E1FB /* RepositoryController.swift in Sources */,
 				FA0A21591C3B25F30031E1FB /* NSURLExtensions.swift in Sources */,
 				FA0A21451C3B237F0031E1FB /* ExtensionDelegate.swift in Sources */,
 				FA0A215A1C3B25F30031E1FB /* Threads.swift in Sources */,
 				FA0A21581C3B25F30031E1FB /* GitHubAPI.swift in Sources */,
 				FA0A21431C3B237F0031E1FB /* InterfaceController.swift in Sources */,
-				FA0A21611C3B326B0031E1FB /* RepositoryListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

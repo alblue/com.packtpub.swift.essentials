@@ -47,6 +47,9 @@
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="Repository" id="CGm-29-feQ"/>
                                         </items>
+                                        <connections>
+                                            <segue destination="cW8-X5-ncd" kind="modal" id="uz2-SO-w7S"/>
+                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="name" destination="CGm-29-feQ" id="vx1-kd-0HP"/>
@@ -61,6 +64,26 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="287" y="203"/>
+        </scene>
+        <!--Repository Controller-->
+        <scene sceneID="91M-dd-GeJ">
+            <objects>
+                <controller id="cW8-X5-ncd" customClass="RepositoryController" customModule="RepositoryBrowserWatch_Extension">
+                    <items>
+                        <label alignment="left" text="Repo" id="N0V-86-wcF"/>
+                        <label alignment="left" text="Issues" id="ssy-UR-PSO"/>
+                        <label alignment="left" text="Watchers" id="dGg-I5-OZq"/>
+                        <label alignment="left" text="Forks" id="1Xi-Iq-NL7"/>
+                    </items>
+                    <connections>
+                        <outlet property="forks" destination="1Xi-Iq-NL7" id="Q7w-MZ-L5F"/>
+                        <outlet property="issues" destination="ssy-UR-PSO" id="wkA-Ed-dbs"/>
+                        <outlet property="repo" destination="N0V-86-wcF" id="cka-fC-ihV"/>
+                        <outlet property="watchers" destination="dGg-I5-OZq" id="fMi-zP-I1a"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="454" y="203"/>
         </scene>
     </scenes>
 </document>
