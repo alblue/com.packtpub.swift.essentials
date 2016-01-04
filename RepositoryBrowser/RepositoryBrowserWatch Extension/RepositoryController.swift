@@ -27,4 +27,12 @@ class RepositoryController: WKInterfaceController {
 	@IBOutlet weak var issues: WKInterfaceLabel!
 	@IBOutlet weak var watchers: WKInterfaceLabel!
 	@IBOutlet weak var forks: WKInterfaceLabel!
+	override func awakeWithContext(context: AnyObject?) {
+		if let data = context as? [String:String] {
+			repo.setText(data["name"])
+			issues.setText(data["open_issues_count"])
+			watchers.setText(data["watchers_count"])
+			forks.setText(data["forks_count"])
+		}
+	}
 }
