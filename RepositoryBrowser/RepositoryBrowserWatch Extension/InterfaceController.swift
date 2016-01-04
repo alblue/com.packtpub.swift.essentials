@@ -23,9 +23,17 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController {
+	let delegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
+	@IBOutlet weak var usersTable: WKInterfaceTable!
 	override func awakeWithContext(context: AnyObject?) {
 		super.awakeWithContext(context)
 		// Configure interface objects here.
+		let users = delegate.users
+		usersTable.setNumberOfRows(users.count, withRowType: "user")
+		for (index,user) in users.enumerate() {
+			let controller = usersTable.rowControllerAtIndex(index) as! UserRowController
+			controller.name.setText(user)
+		}
 	}
 	override func willActivate() {
 		// This method is called when watch view controller is about to be visible to user
@@ -35,4 +43,8 @@ class InterfaceController: WKInterfaceController {
 		// This method is called when watch view controller is no longer visible
 		super.didDeactivate()
 	}
+}
+
+class UserRowController: NSObject {
+	@IBOutlet weak var name: WKInterfaceLabel!
 }
