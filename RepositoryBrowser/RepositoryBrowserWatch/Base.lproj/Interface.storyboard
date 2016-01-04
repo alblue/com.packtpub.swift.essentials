@@ -8,7 +8,27 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RepositoryBrowserWatch" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="RepositoryBrowserWatch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="JBU-8Q-T0e">
+                            <items>
+                                <tableRow identifier="user" id="huz-pT-LAw" customClass="UserRowController" customModule="RepositoryBrowserWatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="pbO-3d-Ssl">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="User" id="jFu-Qr-Rho"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="name" destination="jFu-Qr-Rho" id="SzS-Fc-AY2"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="usersTable" destination="JBU-8Q-T0e" id="zlt-vg-PxK"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>
